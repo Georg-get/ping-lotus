@@ -39,7 +39,7 @@ div.required .control-label:before{content:'* ';color:#F00;font-weight:bold;}
 #cart_fly .btn .fa{margin-right:5px;font-size:14px;}
 .comment{font-weight:bold;font-size:15px;}
 #menu{background:#fff;margin:0;border:none;border-radius:0;z-index:1000;position:absolute;top:42px;left:0;width:100%;border-bottom:1px solid#fff;}
-#menu.fixed{top:0;position:fixed;border-bottom:1px solid#ebeced;}
+#menu.fixed{top:0;position:fixed;border-bottom:1px solid #ebeced;}
 .menu-right{display:flex;align-items:center;float:right;}
 .menu-right .text{font-weight: 500;}
 .dropdown-menu{border:none;margin:0;padding:0;right:0;left:auto;}
