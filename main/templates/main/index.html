@@ -24,20 +24,20 @@
 <body class="common-home">
   <nav id="nav" class="navbar navbar-expand-lg navbar-light bg-light">
     <nav id="top-nav" class="navbar navbar-expand-lg">
-      <div class="container-fluid">
+      <div id="top-nav-container" class="container-fluid">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="bi bi-calendar-week"></span>
         </button>
         <div class="collapse collapse-horizontal navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
+            <li class="nav-item" style="width: 70px;">
               <a class="nav-link" href="#">Link</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
-    <div id="bottom-nav" class="container-fluid ">
+    <div id="bottom-nav" class="container-fluid bg-light">
       <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
         aria-controls="offcanvasNavbar">
         <span class="navbar-toggler-icon"></span>
@@ -47,7 +47,7 @@
           <img id="logo" src="{% static '/img/Lotus.png' %}" alt="Clip" title="Clip" class="img-responsive">
         </a>
       </lu>
-      <div class="offcanvas offcanvas-start " tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas offcanvas-start bg-light" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
         <div id="Nav" class="offcanvas-header">
           <h5 class="offcanvas-title" id="offcanvasNavbarLabel"></h5>
         </div>
@@ -75,8 +75,8 @@
             </li>
           </ul>
           <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Поиск">
-            <button class="btn btn-outline-success" type="submit">Поиск</button>
+            <input id="search" class="form-control" type="search" placeholder="Поиск" aria-label="Поиск">
+            <button id="button-search" class="btn btn-outline-success" type="submit">Поиск</button>
           </form>
         </div>
       </div>
