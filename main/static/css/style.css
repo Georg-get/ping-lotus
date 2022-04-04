@@ -1,12 +1,16 @@
 
 body             {   font-family:'Montserrat', sans-serif; font-weight:400;color:#313131; background-color:#fbfbfb; overflow:auto;   }
 a                {   text-decoration:none;   }
-#nav             {   flex-direction: column; margin: 0px; padding-top: 0px;  }
+#nav             {   display: flex; flex-direction: column; margin: 0px; padding-top: 0px;  }
 #top-nav-cont    {   padding: 0px;}
-#top-nav         {   background-color:#69696928; font-size:small; box-shadow: inset 1px -1px 20px 0px rgb(0 0 0 / 25%);  }
+#top-nav         {   display: flex;  }
 #bottom-nav      {   background-color:#ff67f2b6; box-shadow: inset 0px 0px 20px 0px rgb(0 0 0 / 20%);  }
 #timetable       {   margin-left: 5px; margin-right: 5px; }
 #logo            {   float:left; display:flex; align-items:center; height:70px; margin:4px auto 4px; height:50px;  }
 .offcanvas-start {   top: 58px; }
 .offcanvas-backdrop {   top: 58px;  }
  
+@media (max-width: 992px) {
+    #nav         {   display: flex;  flex-direction: row; flex-wrap: nowrap; justify-content: space-between;}
+    #top-nav     {   flex-wrap: nowrap; padding-top: 0rem; }
+}
