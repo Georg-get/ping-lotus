@@ -10,11 +10,18 @@ a                {   text-decoration:none;   }
 .offcanvas-start {   top: 58px; }
 .offcanvas-backdrop {   top: 58px;  }
 #button-search      {   border-left-style: hidden; border-radius: 0rem 0.25rem 0.25rem 0rem; border-color: #ced4da;}
-#search             {   border-radius: 0.25rem 0rem 0rem 0.25rem;}
-#top-nav-container  {   display: flex; flex-direction: row-reverse;}
+#search             {   border-radius: 0.25rem 0rem 0rem 0.25rem;   }
+#top-nav-container  {   display: flex; flex-direction: row-reverse; }
+#timetable          {   padding-right: 20px;    }
+#navbarSupportedContent {   font-size: small;   }
+#top-nav-content        {   display: flex; width: 170px; height: 16px; flex-direction: column; flex-wrap: wrap; 
+                            justify-content: space-evenly; align-content: center;   }
  
 @media (max-width: 992px) {
     #nav         {   flex-direction: row-reverse; flex-wrap: nowrap; justify-content: space-between;}
     #top-nav     {   flex-wrap: nowrap; padding-top: 0rem; }
     #bottom-nav  {   border-width: 0px; }
+    #top-nav-content    {   display: flex; width: 170px; height: 42px; flex-direction: column; flex-wrap: nowrap; 
+                            justify-content: normal; align-content: normal;   }
+    #logo               {   padding-left: 20px; }
 }
