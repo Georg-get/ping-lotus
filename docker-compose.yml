@@ -1,0 +1,10 @@
+version: '3.7'
+
+services:
+  django:
+    build: .
+    #command: sh -c "gunicorn --bind 0.0.0.0:8000 app.wsgi"
+    #volumes:
+      #- .:/ping-lotus
+    ports:
+      - "0.0.0.0:8000:8000"
