@@ -5,7 +5,7 @@ stages:
   
 test project job:
   stage: test
-  image: python:lastest
+  image: python:last
   script:
     - pip install -r requiements.txt
     - python manage.py test --noinput #от джанго
