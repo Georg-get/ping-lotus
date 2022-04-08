@@ -8,7 +8,7 @@ test project job:
   stage: test
   script:
     - pip install -r requirements.txt
-    - python manage.py runserver #от джанго
+    - python manage.py runserver --noinput #test --noinput #от джанго
 # для всех ветках
 
 build image job:
