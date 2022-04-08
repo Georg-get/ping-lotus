@@ -31,7 +31,7 @@ SECRET_KEY = 'django-insecure-e2yx_0xymc9pxiro0t&se+w5p_jzqvota3t5_#m%j8(kr2+v*d
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [] #["testnnn.ru",] #параметр для имя домена
+ALLOWED_HOSTS = ['127.0.0.1' , '0.0.0.0'] #["testnnn.ru",] #параметр для имя домена
 
 
 # Application definition
