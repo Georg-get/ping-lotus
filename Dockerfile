@@ -1,15 +1,15 @@
-FROM python:3-alpine
+FROM python:3-alpine                            
 
-EXPOSE 8000
+EXPOSE 8000                                    
 
-WORKDIR /ping-lotus
+WORKDIR /ping-lotus                            
 
-ENV PYTHONDONTWRITEBYTECODE=1\
+ENV PYTHONDONTWRITEBYTECODE=1\                  
     PYTHONUNBUFFERED=1
 
-COPY . .
+COPY . .                                       
 
 RUN pip install --upgrade pip \
-    pip install -r requirements.txt
+    pip install -r requirements.txt             
 
-CMD sh  cd ping-lotus ; python3 manage.py runserver 0.0.0.0:8000
+CMD sh  cd ping-lotus ; python3 manage.py runserver 0.0.0.0:8000 
