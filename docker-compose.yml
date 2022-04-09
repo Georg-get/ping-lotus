@@ -2,7 +2,7 @@ version: '3.7'
 
 services:
   django:                       # название 
-    build: .
+    image: registry.gitlab.com/georg-get/ping-lotus:latest
     #volumes:
       #- .:/ping-lotus
     ports:
