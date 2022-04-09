@@ -26,11 +26,13 @@ build image job:
 #deploy job:
   #stage: deploy
   #before_script:
-       #- docker login -u gitlab-ci-token -p ${CI_JOB_TOKEN} ${CI_REGISTRY}
+    #- docker login -u gitlab-ci-token -p ${CI_JOB_TOKEN} ${CI_REGISTRY}
   #script:
+    #- cp ./docker-compose.yml /var/www
+    #- cd /var/www
     #- docker-compose pull ${CI_REGISTRY_IMAGE}
     #- docker-compose stop ${CI_REGISTRY_IMAGE} || true #&& docker-compose rm ${CI_REGISTRY_IMAGE} || true
-    #- docker-compose up -d 
+    #- docker-compose up -d --force-recreate
   #only:
     #- master
   #tags:
