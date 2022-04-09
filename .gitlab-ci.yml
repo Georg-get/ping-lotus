@@ -3,12 +3,12 @@ stages:
   - build docker
   - deploy
   
-#test project job:
-  #image: python:latest
-  #stage: test
-  #script:
-    #- pip install -r requirements.txt
-    #- python manage.py test --noinput #запуск автотестов
+test project job:
+  image: python:latest
+  stage: test
+  script:
+    - pip install -r requirements.txt
+    - python manage.py test --noinput #запуск автотестов
 # Добавишь джобу когда тесты напишешь
 
 build image job:
@@ -24,14 +24,14 @@ build image job:
     #- master
     # - merge_requests
 
-#deploy job:
-  #stage: deploy
-  #script:
-    #- 
-    #- 
-    #- 
+deploy job:
+  stage: deploy
+  script:
+    - 
+    - 
+    - 
   #only:
     #- master
-  #tags:
-    #- aws
+  tags:
+    - test #prom
 
