@@ -24,14 +24,14 @@ build image job:
     #- master
     # - merge_requests
 
-deploy job:
-  stage: deploy
-  script:
-    - 
-    - 
-    - 
+#deploy job:
+  #stage: deploy
+  #script:
+    #- 
+    #- 
+    #- 
   #only:
     #- master
-  tags:
-    - test #prom
+  #tags:
+    #- test #prom
 
