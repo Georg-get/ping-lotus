@@ -34,4 +34,4 @@ deploy job:
   #only:
     #- master
   tags:
-    - test #prom
+    - test # prom
