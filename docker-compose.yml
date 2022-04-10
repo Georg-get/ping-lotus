@@ -7,3 +7,5 @@ services:
       #- .:/ping-lotus
     ports:
       - "0.0.0.0:8000:8000"      # порт наружу
+
+      # main/* mysite/* manage.py requirements.txt ./ping-lotus/ 
