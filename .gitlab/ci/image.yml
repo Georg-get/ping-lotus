@@ -10,3 +10,4 @@ build image job:
     - docker push ${CI_REGISTRY}/georg-get/ping-lotus
   only:
     - master
+    #- merge_requests
