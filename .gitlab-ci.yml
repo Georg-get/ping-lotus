@@ -2,25 +2,13 @@ stages:
   - test
   - build docker
   - deploy
-  
-test project job:
-  image: python:latest
-  stage: test
-  script:
-    - pip install -r requirements.txt
-    - python manage.py test --noinput # запуск тестов tests.py
 
-build image job:
-  stage: build docker
-  image: docker:stable
-  services:
-    - docker:dind
-  script:
-    - docker login -u gitlab-ci-token -p ${CI_JOB_TOKEN} ${CI_REGISTRY}
-    - docker build -t ${CI_REGISTRY}/georg-get/ping-lotus .
-    - docker push ${CI_REGISTRY}/georg-get/ping-lotus
-  only:
-    - master
+
+include:
+  - .gitlab/ci/tests/test.yml
+  - .gitlab/ci/image.yml
+  
+# запуск тестов tests.py
     # - merge_requests
 
 #deploy job:
