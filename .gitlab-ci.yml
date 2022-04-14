@@ -1,7 +1,7 @@
 stages:
   - test
   - build docker
-  #- deploy
+  - deploy
 
 include:
   - .gitlab/ci/tests/test.yml
