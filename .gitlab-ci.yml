@@ -1,0 +1,9 @@
+stages:
+  - test
+  - build docker
+  - deploy
+
+include:
+  - .gitlab/ci/tests/test.yml
+  - .gitlab/ci/image.yml
+  #- .gitlab/cd/deploy.yml
