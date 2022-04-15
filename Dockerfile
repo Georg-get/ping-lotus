@@ -1,5 +1,6 @@
 FROM python:3.9-alpine                            
-                                 
+
+EXPOSE 8000                                 
 WORKDIR /ping-lotus                            
 
 ENV PYTHONDONTWRITEBYTECODE=1\                  
