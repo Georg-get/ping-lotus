@@ -11,4 +11,4 @@ deploy job:
   only:
     - master
   tags:
-    - prom
+    - shell
