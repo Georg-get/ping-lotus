@@ -5,5 +5,5 @@ stages:
 
 include:
   - .gitlab/ci/tests/test.yml
-  - .gitlab/ci/image.yml
-  - .gitlab/cd/deploy.yml
+  - .gitlab/ci/image.yml # только в мастер ветке
+  - .gitlab/cd/deploy.yml# только в мастер ветке
