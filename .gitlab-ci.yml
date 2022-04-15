@@ -4,6 +4,6 @@ stages:
   - deploy
 
 include:
-  - .gitlab/ci/tests/test.yml
+  - .gitlab/ci/tests/test.yml # везде
   - .gitlab/ci/image.yml # только в мастер ветке
   - .gitlab/cd/deploy.yml # только в мастер ветке
