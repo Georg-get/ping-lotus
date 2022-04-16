@@ -1,0 +1,26 @@
+<!doctype html>
+<html dir="ltr" lang="ru">
+{% load static %}
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Главная страница</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
+  <link type="text/css" media="screen" rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,900&subset=cyrillic"
+    type='text/css' rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="{% static 'css/fontawesome.min.css' %}">
+  <link media="screen" rel="stylesheet" href="{% static 'css/style.css' %}">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+
+</head>
+
+<body class="common-home">
+{% block navbar %}{% endblock navbar %}
+</body>
+</html> 
