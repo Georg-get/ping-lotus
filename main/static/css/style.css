@@ -2,7 +2,6 @@
 body             {   font-family:'Montserrat', sans-serif; font-weight:400; background-color:#ffffff; overflow:auto;   }
 a                {   text-decoration:none;   }
 #nav             {   display: flex; flex-direction: column; margin: 0px; padding-top: 0px; border-width: 1px; border-bottom-style: solid ; border-color: #e2e2e2; }
-#top-nav-cont    {   padding: 0px;}
 #top-nav         {   display: flex;  }
 #bottom-nav      {   border-width: 1px; border-top-style: solid; border-color: #e0e0e0; }
 #timetable       {   margin-left: 5px; margin-right: 5px; }
@@ -11,18 +10,15 @@ a                {   text-decoration:none;   }
 .offcanvas-backdrop {   top: 58px;  }
 #button-search      {   border-left-style: hidden; border-radius: 0rem 0.25rem 0.25rem 0rem; border-color: #ced4da;}
 #search             {   border-radius: 0.25rem 0rem 0rem 0.25rem;   }
-#top-nav-container  {   display: flex; flex-direction: row-reverse; }
+#top-nav-container  {   margin: 6px; display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: center; }
 #timetable          {   padding-right: 20px;    }
 #navbarSupportedContent { background-color: rgba(0,0,0,0); border: 0px; font-size: small;   }
-#top-nav-content        {   display: flex; width: 170px; height: 16px; flex-direction: column; flex-wrap: wrap; 
-                            justify-content: space-evenly;    }
  
 @media (max-width: 992px) {
     #nav         {   flex-direction: row-reverse; flex-wrap: nowrap; justify-content: space-between;}
     #top-nav     {   flex-wrap: nowrap; padding-top: 0rem; }
     #bottom-nav  {   border-width: 0px; }
-    #top-nav-content    {   display: flex; height: 42px; flex-wrap: nowrap; 
-                            justify-content: normal; align-content: normal;   }
     #logo               {   padding-left: 20px; }
     #navbarSupportedContent { background-color: #e0e0e0; border: 1px solid rgba(0,0,0,.15);   }
+    #top-nav-container  {   margin: 0px; margin-top: 6px; }
 }
