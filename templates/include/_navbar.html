@@ -1,78 +1,52 @@
-{% load static %}
-<nav id="nav" class="navbar navbar-expand-lg navbar-light bg-light">
+<nav id="nav" class="navbar navbar-expand-lg navbar-light bg-light p-0">
     <nav id="top-nav" class="navbar navbar-expand-lg">
-      <div id="top-nav-container" class="container-fluid">
-        <button id="button-calendar" class="navbar-toggler" type="button" data-bs-toggle="dropdown" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="bi bi-calendar-week"></span>
-        </button>
-        <div class="animation dropdown-menu dropdown-menu-end navbar-collapse" id="navbarSupportedContent">
-          <div class="navbar-nav">
-            <li class="nav-item">
-              <li><a class="dropdown-item"> Пн-Пт 9:00-21:00</a></li>
-              <li><a class="dropdown-item"> Сб-Вс 9:00-18:00</a></li>
-              <li><a class="dropdown-item"> Пн-Пт 9:00-21:00</a></li>
-            </li>
-          </div>
+        <div id="top-nav-container" class="container-fluid">
+            <button id="button-calendar" class="navbar-toggler" type="button" data-bs-toggle="dropdown"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="bi bi-calendar-week"></span>
+            </button>
+            <div class="animation dropdown-menu dropdown-menu-end navbar-collapse" id="navbarSupportedContent">
+                <div class="navbar-nav">
+                    <li class="nav-item">
+                    <li>
+                        <a class="dropdown-item">Пн-Пт 9:00-21:00</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item">Сб-Вс 9:00-18:00</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item">+7-495-905-60-30</a>
+                    </li>
+                    </li>
+                </div>
+            </div>
         </div>
-      </div>
     </nav>
     <div id="bottom-nav" class="container-fluid bg-light">
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-        aria-controls="offcanvasNavbar">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <lu class="nav-item">
-        <a id="logo-visible" class="navbar-brand translate-middle">
-          <img id="logo" src="{% static '/img/Lotus.png' %}" alt="Clip" title="Clip" class="img-responsive">
-        </a>
-      </lu>
-      <div class="offcanvas offcanvas-start bg-light" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-        <div id="Nav" class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasNavbarLabel"></h5>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <lu class="nav-item">{% include 'include/_logo.html' %}</li></lu>
+        <div class="offcanvas offcanvas-start bg-light" tabindex="-1" id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel">
+            <div id="Nav" class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel"></h5>
+            </div>
+            <div id="Nav" class="offcanvas-body ">
+                <ul class="navbar-nav justify-content-start flex-grow-1 pe-3 ">
+                    <li class="nav-item">{% include 'include/_categories.html' %}</li>
+                    <li class="nav-item">{% include 'include/_authentication.html' %}</li>
+                    <li class="nav-item">
+                        <a class="nav-link ps-3 pe-3" href="#">Кнопка</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input id="search" class="form-control" type="search" placeholder="Поиск" aria-label="Поиск">
+                    <button id="button-search" class="btn btn-outline-success" type="submit">Поиск</button>
+                </form>
+            </div>
         </div>
-        <div id="Nav" class="offcanvas-body">
-          <ul class="navbar-nav justify-content-start flex-grow-1 pe-3">
-            {% include 'include/_categories.html' %}
-            <li class="nav-item">
-              <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown
-                </button>
-                <div class="dropdown-menu">
-                  <form class="px-4 py-3">
-                    <div class="mb-3">
-                      <label for="exampleDropdownFormEmail1" class="form-label">Email address</label>
-                      <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com">
-                    </div>
-                    <div class="mb-3">
-                      <label for="exampleDropdownFormPassword1" class="form-label">Password</label>
-                      <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">
-                    </div>
-                    <div class="mb-3">
-                      <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="dropdownCheck">
-                        <label class="form-check-label" for="dropdownCheck">
-                          Remember me
-                        </label>
-                      </div>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Sign in</button>
-                  </form>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">New around here? Sign up</a>
-                  <a class="dropdown-item" href="#">Forgot password?</a>
-                </div>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Ссылка</a>
-            </li>
-          </ul>
-          <form class="d-flex">
-            <input id="search" class="form-control" type="search" placeholder="Поиск" aria-label="Поиск">
-            <button id="button-search" class="btn btn-outline-success" type="submit">Поиск</button>
-          </form>
-        </div>
-      </div>
     </div>
-  </nav>
+</nav>

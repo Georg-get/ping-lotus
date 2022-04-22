@@ -19,6 +19,8 @@ a                {   text-decoration:none;   }
 .dropdown-item:focus,.dropdown-item:hover  { background-color: #fff9c1;}
 .dropdown-item:active { background-color: #dd3290;}
 #categories { margin-top: 1.09rem; left: -72%; min-width: 0rem;   }
+.modal-backdrop { position: unset;}
+.nav-link { padding: 1.1rem 1rem; border-width: 1px; border-right-style: solid; border-color: #e0e0e0; }
 
     
 .animation.dropdown-menu {
