@@ -10,8 +10,13 @@ a                {   text-decoration:none;   }
 #logo            {   float:left; display:flex; align-items:center; height:70px; margin:4px auto 4px; height:50px;  }
 .offcanvas-start {   top: 67px; }
 .offcanvas-backdrop {   top: 67px;  }
-#button-search      {   border-left-style: hidden; border-radius: 0rem 0.25rem 0.25rem 0rem; border-color: #ced4da;}
-#search             {   border-radius: 0.25rem 0rem 0rem 0.25rem;   }
+.btn-outline-success { color: #798389;}
+.btn-outline-success:hover { color: #dd3290; background-color: #f8f9fa;  }
+.btn-outline-success:active { color: #fff; background-color: #dd3290; }
+.btn-outline-success:focus { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
+.btn-outline-success:focus:active { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
+#button-search      {   border-radius: 0; border: 0; border-width: 1px; border-bottom-style: solid; border-color: #e0e0e0;}
+#search             {   width: 30rem; background-color: #f8f9fa; border-radius: 0; border: 0; border-width: 1px; border-bottom-style: solid; border-color: #e0e0e0;   }
 #top-nav-container  {   margin: 6px; display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: center; }
 #timetable          {   padding-right: 20px;    }
 #navbarSupportedContent { background-color: rgba(0,0,0,0); border: 0px; font-size: small; visibility: visible; }
@@ -21,8 +26,8 @@ a                {   text-decoration:none;   }
 #categories { margin-top: 1.09rem; left: -72%; min-width: 0rem;   }
 .modal-backdrop { position: unset;}
 .nav-link { padding: 1.1rem 1rem; border-width: 1px; border-right-style: solid; border-color: #e0e0e0; }
-
-    
+#nav-logo { border-width: 1px; border-right-style: solid; border-color: #e0e0e0;  }
+#offcanvas-body { display: contents; }
 .animation.dropdown-menu {
     display: block;
     visibility: hidden;
