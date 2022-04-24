@@ -5,7 +5,7 @@ a                {   text-decoration:none;   }
 #nav             {   display: flex; flex-direction: column; margin: 0px; padding-top: 0px;
                      border-width: 1px; border-bottom-style: solid ; border-color: #e2e2e2; }
 #top-nav         {   display: flex;  }
-#bottom-nav      {   border-width: 1px; border-top-style: solid; border-color: #e0e0e0; }
+#bottom-nav      {   padding: 0 0 0 0; border-width: 1px; border-top-style: solid; border-color: #e0e0e0; }
 #timetable       {   margin-left: 5px; margin-right: 5px; }
 #logo            {   float:left; display:flex; align-items:center; height:70px; margin:4px auto 4px; height:50px;  }
 .offcanvas-start {   top: 67px; }
@@ -15,6 +15,7 @@ a                {   text-decoration:none;   }
 .btn-outline-success:active { color: #fff; background-color: #dd3290; }
 .btn-outline-success:focus { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
 .btn-outline-success:focus:active { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
+.form-control:focus { box-shadow: 0 0 0 0; }
 #button-search      {   border-radius: 0; border: 0; border-width: 1px; border-bottom-style: solid; border-color: #e0e0e0;}
 #search             {   width: 30rem; background-color: #f8f9fa; border-radius: 0; border: 0; border-width: 1px; border-bottom-style: solid; border-color: #e0e0e0;   }
 #top-nav-container  {   margin: 6px; display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: center; }
@@ -23,10 +24,22 @@ a                {   text-decoration:none;   }
 .dropdown-menu { border-radius: 0;}
 .dropdown-item:focus,.dropdown-item:hover  { background-color: #fff9c1;}
 .dropdown-item:active { background-color: #dd3290;}
-#categories { margin-top: 1.09rem; left: -72%; min-width: 0rem;   }
+#catalog {  border-width: 1px; border-right-style: solid; border-color: #e0e0e0;  }
 .modal-backdrop { position: unset;}
-.nav-link { padding: 1.1rem 1rem; border-width: 1px; border-right-style: solid; border-color: #e0e0e0; }
-#nav-logo { border-width: 1px; border-right-style: solid; border-color: #e0e0e0;  }
+.nav-link { position: relative; padding: 1.1rem 1rem; border-width: 1px; border-left-style: solid; border-color: #e0e0e0; }
+.nav-link:hover { background-color: #e0e0e0; }
+.nav-link::after { 
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0%;
+  height: 5%;
+  background-color: #dd3290;
+  transition: all 0.2s ease-in-out;}
+  .nav-link:hover::after { width: 100%; left: 0%; }
+  
+#nav-logo { padding-left: 0.75rem;  }
 #offcanvas-body { display: contents; }
 .animation.dropdown-menu {
     display: block;
