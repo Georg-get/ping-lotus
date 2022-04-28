@@ -3,7 +3,8 @@
 body                                { font-family:'Montserrat', sans-serif; font-weight:400; background-color:#ffffff;
                                       overflow:auto;   }
 a                                   { text-decoration:none;   }
-/*=================================*/
+.flex                               { display: flex; }
+/*=================================*/ 
 /*----------Кнопки\Меню------------*/
 .btn-outline-success                { color: #798389;}
 .btn-outline-success:hover          { color: #dd3290; background-color: #f8f9fa;  }
@@ -46,7 +47,7 @@ a                                   { text-decoration:none;   }
                                       border-width: 1px; border-bottom-style: solid ; border-color: #e2e2e2; }
 #logo                               { float:left; display:flex; align-items:center; height:70px; margin:4px auto 4px; height:50px;  }
 #bottom-nav                         { padding: 0 0 0 0; border-width: 1px; border-top-style: solid; border-color: #e0e0e0; }
-#button-search                      { padding-left: 0; border-radius: 0; border: 0; border-width: 1px; border-bottom-style: solid; 
+#button-search                      { padding-left: 0.75rem; border-radius: 0; border: 0; border-width: 1px; border-bottom-style: solid; 
                                       border-color: #e0e0e0; }
 #search                             { width: 30rem; background-color: #f8f9fa; border-radius: 0; border: 0; border-width: 1px; border-bottom-style: solid; border-color: #e0e0e0;   }
 #catalog                            { padding: 0.6rem 1rem 0.6rem 1rem; border-width: 1px; border-right-style: solid; border-color: #e0e0e0;  }
@@ -56,28 +57,45 @@ a                                   { text-decoration:none;   }
 #catalog .bi.bi-list                { font-size: xx-large;  } 
 #cart                               { padding-right: 1.5rem; }
 #authentication                     { padding: 1rem 1rem 1rem 0.5rem; }
+#v2-search                          { display: none; }
 /*=================================*/
 /*=================================================================================================================================*/
 /*--------------------------Breakpoints--------------------------------------------------------------------------------------------*/
+@media (max-width: 1400px) {
+    #search                 { width: 20rem;}
+    body                    { font-size:smaller; }
+    .r.bi                   { font-size: large; }
+    .l.bi                   { font-size: large; }
+    #catalog .bi.bi-list    { font-size: large; }
+    #catalog,
+    .navbar-expand-lg 
+    .btn-nav.nav-link,       
+    #authentication         { padding: 0.65rem 1rem 0.65rem 1rem; }
+    #logo                   { height:60px; height:40px;  }
+}
 @media (max-width: 1200px) {
     .nav-link               { font-size: 0; }
+    .a.nav-link             { font-size:small; padding: 0.2rem 0.5rem 0.2rem 0.5rem; }
     .r.bi                   { padding-left: 0rem; font-size: x-large; }
     .l.bi                   { padding-right: 0rem; font-size: x-large; }
     #catalog .bi.bi-list    { font-size: x-large; }
     #catalog,
     .navbar-expand-lg 
     .btn-nav.nav-link,       
-    #authentication         { padding: 1rem 1.5rem 1rem 1.5rem; }
+    #authentication         { padding: 0.5rem 1rem 0.5rem 1rem; }
 }
 @media (max-width: 992px) {/*---Breakpoint:Смартфон---*/
     #nav                    { flex-direction: row-reverse; flex-wrap: nowrap; justify-content: space-between;}
     #top-nav                { display: none; }
     #bottom-nav             { border-width: 0px; }
-    #logo                   { padding-left: 20px; }
+    #logo                   { padding-left: 0.5rem; }
+    #nav-logo               { padding: 0 0 0 0; }
     #navbarSupportedContent { background-color: #e0e0e0; border: 1px solid rgba(0,0,0,.15); margin-top: 1.09rem;
                               top: 95%; right: 0%; visibility: hidden; }
     #top-nav-container      { margin: 0px; margin-top: 6px; }
     li.nav-item.me-auto     { margin-right: none; }
-    #navbarSupportedContent.animation.dropdown-menu.show {visibility: visible;}
+    #v2-search              { display: flex; }
+    .nav-item.me-auto.flex  { display: none; }
+    #navbarSupportedContent.an imation.dropdown-menu.show {visibility: visible;}
 }/*===================================================*/
 /*=================================================================================================================================*/

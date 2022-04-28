@@ -15,6 +15,7 @@
             aria-controls="offcanvasNavbar">
             <span class="navbar-toggler-icon"></span>
         </button>
+        <li id="v2-search" class="nav-item">{% include 'include/_search.html' %}</li>
         <lu id="nav-logo" class="nav-item">{% include 'include/_logo.html' %}</lu>
         <div class="offcanvas offcanvas-start bg-light" tabindex="-1" id="offcanvasNavbar"
             aria-labelledby="offcanvasNavbarLabel">
@@ -25,14 +26,7 @@
                 <ul class="navbar-nav ">
                     <li class="nav-item">{% include 'include/_authentication.html' %}</li>
                     <li class="nav-item me-auto">{% include 'include/_categories.html' %}</li>
-                    <li class="nav-item me-auto d-flex">
-                        <form class="d-flex align-items-center  ">
-                            <input id="search" class="form-control" type="search" placeholder="Поиск"
-                                aria-label="Поиск">
-                            <button id="button-search" class="btn btn-outline-success" type="submit"><i
-                                    class="bi bi-search"></i></button>
-                        </form>
-                    </li>
+                    <li class="nav-item me-auto flex">{% include 'include/_search.html' %}</li>
                     <li class="nav-item"><a class="btn-nav nav-link" href="#">Избранное<i class="r bi bi-bookmarks"></i></a></li>
                     <li class="nav-item"><a class="btn-nav nav-link" href="#">Сравнение<i class="r bi bi-ui-checks"></i></a></li>
                     <li class="nav-item"><a id="cart" class="btn-nav nav-link" href="#">Корзина<i class="r bi bi-cart3"></i></a></li>
