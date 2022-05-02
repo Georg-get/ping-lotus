@@ -25,9 +25,12 @@ a                                   { text-decoration:none;   }
 .nav-link:hover::after              { width: 100%; left: 0%; }
 .r.bi                               { padding-left: 0.5rem; font-size: x-large; }
 .l.bi                               { padding-right: 0.5rem; font-size: x-large; }
+.navbar-toggler                     { border-radius: 0; border: 0 none; }
+.navbar-toggler:focus:active        { background-color: #dd3290; }
+.navbar-toggler:focus               { box-shadow: 0 0 0 0; }
 /*----------Модальный окна---------*/
-.offcanvas-start                    { top: 67px; }
-.offcanvas-backdrop                 { top: 67px;  }
+.offcanvas-start                    { top: 55px; }
+.offcanvas-backdrop                 { top: 55px;  }
 .modal-backdrop                     { position: unset; }
 /*=================================*/
 /*=================================================================================================================================*/
@@ -85,6 +88,12 @@ a                                   { text-decoration:none;   }
     #authentication         { padding: 0.5rem 1rem 0.5rem 1rem; }
 }
 @media (max-width: 992px) {/*---Breakpoint:Смартфон---*/
+    .r.bi                   { padding-left: 1rem; padding-right: 1rem;}
+    .l.bi                   { padding-left: 1rem; padding-right: 1rem;}
+    a.btn-nav.nav-link      { flex-direction: row-reverse!important; justify-content: flex-end; }
+    .nav-link               { font-size:medium; }
+    #catalog                { flex-direction: row!important; justify-content: unset; border-width: 0px; border-right-style: none; }
+    #authentication         { flex-direction: row!important; justify-content: unset; }
     #nav                    { flex-direction: row-reverse; flex-wrap: nowrap; justify-content: space-between;}
     #top-nav                { display: none; }
     #bottom-nav             { border-width: 0px; }
@@ -93,9 +102,12 @@ a                                   { text-decoration:none;   }
     #navbarSupportedContent { background-color: #e0e0e0; border: 1px solid rgba(0,0,0,.15); margin-top: 1.09rem;
                               top: 95%; right: 0%; visibility: hidden; }
     #top-nav-container      { margin: 0px; margin-top: 6px; }
-    li.nav-item.me-auto     { margin-right: none; }
+    #nav-categories         { margin-right: unset!important; }
     #v2-search              { display: flex; }
     .nav-item.me-auto.flex  { display: none; }
-    #navbarSupportedContent.an imation.dropdown-menu.show {visibility: visible;}
+    #navbarSupportedContent.animation.dropdown-menu.show {visibility: visible;}
+@media (max-width: 576px) {
+    #v2-search              { display: none; }
+}
 }/*===================================================*/
 /*=================================================================================================================================*/
