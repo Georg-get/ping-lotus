@@ -30,8 +30,11 @@ a                                   { text-decoration:none;   }
 .navbar-toggler:focus               { box-shadow: 0 0 0 0; }
 /*----------Модальный окна---------*/
 .offcanvas-start                    { top: 55px; }
-.offcanvas-backdrop                 { top: 55px;  }
+.offcanvas-backdrop                 { top: 0px;  }
 .modal-backdrop                     { position: unset; }
+.modal.fade .modal-dialog           { transform: translate(-100px,0); }
+.modal.show.fade .modal-dialog      { transform: translate(0px,0); }
+
 /*=================================*/
 /*=================================================================================================================================*/
 /*----------------------------------Навбар-----------------------------------------------------------------------------------------*/
@@ -88,6 +91,8 @@ a                                   { text-decoration:none;   }
     #authentication         { padding: 0.5rem 1rem 0.5rem 1rem; }
 }
 @media (max-width: 992px) {/*---Breakpoint:Смартфон---*/
+    .offcanvas-start                    { top: 55px; }
+    .offcanvas-backdrop                 { top: 55px;  }
     .r.bi                   { padding-left: 1rem; padding-right: 1rem;}
     .l.bi                   { padding-left: 1rem; padding-right: 1rem;}
     a.btn-nav.nav-link      { flex-direction: row-reverse!important; justify-content: flex-end; }
