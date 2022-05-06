@@ -1,0 +1,4 @@
+telegram job:
+  stage: telegram
+  script:
+  - curl -s -X POST https://api.telegram.org/bot'${TokenId}'/sendMessage -d chat_id='${ChatId}' -d text="Джоба ${CI_JOB_ID} , ветки ${CI_COMMIT_BRANCH} ,успешно выполнена" 
