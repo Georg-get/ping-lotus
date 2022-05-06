@@ -1,4 +1,10 @@
 telegram job:
   stage: telegram
   script:
-  - sh telegram.sh
+      - sh telegram.sh "your success message ✅"
+
+  notify_error:
+    stage: telegram
+    script: 
+        - sh telegram.sh "your fail message ❌"
+    when: on_failure
