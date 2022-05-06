@@ -1,10 +1,4 @@
 telegram job:
   stage: telegram
   script:
-      - sh ci-notify.sh #"your success message ✅"
-
-  #notify_error:
-    #stage: notify
-    #script: 
-        #- sh ci-notify.sh "your fail message ❌"
-    #when: on_failure
+  - curl -s -X POST https://api.telegram.org/bot'5370891514:AAGKxSQlWDc3yJzq6VeA-xQNloR4MVvPDsM'/sendMessage -d chat_id='-1001508234762' -d text="Джоба ${CI_JOB_ID}, ветки ${CI_COMMIT_BRANCH} ,успешно выполнена" 
