@@ -25,7 +25,12 @@
             <div id="offcanvas-body" class="offcanvas-body">
                 <ul class="navbar-nav ">
                     <li class="nav-item">{% include 'include/_authentication.html' %}</li>
-                    <li id="nav-categories" class="nav-item me-auto">{% include 'include/_categories.html' %}</li>
+                    <li id="nav-categories" class="nav-item me-auto">
+                        <a id="catalog" class="btn-nav nav-link" data-bs-toggle="modal" href="#exampleModal" role="button"
+                            aria-controls="exampleModal">
+                            <i class="l bi bi-list"></i>Каталог
+                        </a>
+                    </li>
                     <li class="nav-item me-auto flex">{% include 'include/_search.html' %}</li>
                     <li class="nav-item"><a class="btn-nav nav-link" href="#">Избранное<i class="r bi bi-bookmarks"></i></a></li>
                     <li class="nav-item"><a class="btn-nav nav-link" href="#">Сравнение<i class="r bi bi-ui-checks"></i></a></li>

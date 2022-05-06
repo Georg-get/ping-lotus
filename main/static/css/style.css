@@ -28,12 +28,13 @@ a                                   { text-decoration:none;   }
 .navbar-toggler                     { border-radius: 0; border: 0 none; }
 .navbar-toggler:focus:active        { background-color: #dd3290; }
 .navbar-toggler:focus               { box-shadow: 0 0 0 0; }
-/*----------Модальный окна---------*/
+/*----------Модальные окна---------*/
 .offcanvas-start                    { top: 55px; }
 .offcanvas-backdrop                 { top: 0px;  }
-.modal-backdrop                     { position: unset; }
+
 .modal.fade .modal-dialog           { transform: translate(-100px,0); }
 .modal.show.fade .modal-dialog      { transform: translate(0px,0); }
+.modal-fullscreen                   { width: 65vw;  }
 
 /*=================================*/
 /*=================================================================================================================================*/
@@ -55,7 +56,8 @@ a                                   { text-decoration:none;   }
 #bottom-nav                         { padding: 0 0 0 0; border-width: 1px; border-top-style: solid; border-color: #e0e0e0; }
 #button-search                      { padding-left: 0.75rem; border-radius: 0; border: 0; border-width: 1px; border-bottom-style: solid; 
                                       border-color: #e0e0e0; }
-#search                             { width: 30rem; background-color: #f8f9fa; border-radius: 0; border: 0; border-width: 1px; border-bottom-style: solid; border-color: #e0e0e0;   }
+#search                             { width: 30rem; background-color: #f8f9fa; border-radius: 0; border: 0; border-width: 1px; border-bottom-style: solid;
+                                      border-color: #e0e0e0; }
 #catalog                            { padding: 0.6rem 1rem 0.6rem 1rem; border-width: 1px; border-right-style: solid; border-color: #e0e0e0;  }
 #nav-logo                           { padding: 0 1.5rem 0 1.5rem; }
 #offcanvas-body                     { display: contents; } 
@@ -91,6 +93,7 @@ a                                   { text-decoration:none;   }
     #authentication         { padding: 0.5rem 1rem 0.5rem 1rem; }
 }
 @media (max-width: 992px) {/*---Breakpoint:Смартфон---*/
+    .modal-fullscreen                   { width: 100vw;  }
     .offcanvas-start                    { top: 55px; }
     .offcanvas-backdrop                 { top: 55px;  }
     .r.bi                   { padding-left: 1rem; padding-right: 1rem;}
