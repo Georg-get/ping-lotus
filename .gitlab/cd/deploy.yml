@@ -9,7 +9,7 @@ deploy job:
     - docker-compose pull 
     - docker-compose stop  www_django_1|| true #&& docker-compose rm ${CI_REGISTRY_IMAGE} || true
     - docker-compose up -d --force-recreate
-  only:
-    - master
+  #only:
+    #- master
   tags:
     - shell
