@@ -1,10 +1,10 @@
-telegram job:
+telegram: 
   stage: telegram
   script:
-      - sh ci-notify.sh "your success message ✅"
+      - sh notify.sh "your success message ✅"
 
-#notify_error:
-  #stage: notify
-  #script:
-      #- sh ci-notify.sh "your fail message ❌"
-  #when: on_failure
+notify_error:
+  stage: notify
+  script:
+      - sh notify.sh "your fail message ❌"
+  when: on_failure
