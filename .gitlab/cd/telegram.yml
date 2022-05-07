@@ -1,4 +1,4 @@
 telegram job:
   stage: telegram
   script:
-  - sh .ci-notify.sh
+  - ./ci-notify.sh
