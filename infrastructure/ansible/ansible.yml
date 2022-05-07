@@ -62,6 +62,7 @@
       copy:
         src: "{{playbook_dir}}/default"
         dest: /etc/nginx/sites-enabled/default
+        mode: 'u+x,g+x'
 
     - name: registert nginx service | nginx
       service:
