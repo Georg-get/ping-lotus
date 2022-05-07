@@ -1,7 +1,12 @@
 test ansible playbook job:
   image: ubuntu:18.04
   stage: test ansible playbook
+  
+  varibles:
+    PWD_AN: "/infrastructure/ansible/"
+
   script:
     - apt update && apt install ansible -y
-    - ansible-playbook ./infrastructure/ansible/ansible.yml
+    - ansible-playbook .${PWD_AN}ansible.yml
     - curl localhost
+    - ansible-playbook .${PWD_AN}rm_nginx.yml
