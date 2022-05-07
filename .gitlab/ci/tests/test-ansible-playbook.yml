@@ -4,5 +4,5 @@ test ansible playbook job:
   script:
     - apt update && apt install ansible -y
     - ansible-playbook ./infrastructure/ansible.yml
-    - docker-compose up -d
+    - docker-compose -f docker-compose_test.yml up -d
     - curl localhost
