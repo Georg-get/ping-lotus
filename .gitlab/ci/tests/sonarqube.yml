@@ -1,0 +1,8 @@
+sonarqube project job:
+  stage: sonarqube
+  script:
+      - sonar-scanner \
+          -Dsonar.projectKey=ping-lotus \
+          -Dsonar.host.url=$SONAR_HOST_URL \
+          -Dsonar.login=$SONAR_TOKEN
+  #-Dsonar.qualitygate.wait=true \
