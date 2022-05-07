@@ -3,5 +3,5 @@ test ansible playbook job:
   stage: test ansible playbook
   script:
     - apt update && apt install ansible -y
-    - ansible-playbook -i ./infrastructure ansible.yml
+    - ansible-playbook -i ./infrastructure/ansible.yml
     - curl localhost
