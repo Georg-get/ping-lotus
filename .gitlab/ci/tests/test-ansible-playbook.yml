@@ -2,6 +2,6 @@ test ansible playbook job:
   image: ubuntu:18.04
   stage: test ansible playbook
   script:
-    - apt update && apt install ansible
+    - apt update && apt install ansible -y
     - ansible-playbook -i ./infrastructure/ ansible.yml
     - curl localhost
