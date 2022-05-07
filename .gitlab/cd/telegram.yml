@@ -1,7 +1,7 @@
 telegram: 
   stage: telegram
   script:
-      - sh ${CI_PROJECT_DIR}/.gitlab/cdnotify.sh "your success message ✅"
+      - sh ${CI_PROJECT_DIR}/.gitlab/notify.sh "your success message ✅"
 
 notify_error:
   stage: telegram
