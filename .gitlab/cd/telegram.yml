@@ -4,7 +4,7 @@ telegram:
       - sh notify.sh "your success message ✅"
 
 notify_error:
-  stage: notify
+  stage: telegram
   script:
       - sh notify.sh "your fail message ❌"
   when: on_failure
