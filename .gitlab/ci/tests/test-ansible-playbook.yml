@@ -1,4 +1,4 @@
-test ansible playbook job:
+test ansible playbook:
   image: ubuntu:18.04
   stage: test ansible playbook
   script:

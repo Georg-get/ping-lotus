@@ -1,4 +1,4 @@
-test project job:
+test:
   image: python:latest
   stage: test
   script:

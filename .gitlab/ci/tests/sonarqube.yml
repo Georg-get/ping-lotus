@@ -1,4 +1,4 @@
-sonarqube project job:
+sonarqube:
   stage: sonarqube
   script:
       - sonar-scanner \
