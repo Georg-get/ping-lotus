@@ -11,5 +11,5 @@ deploy job:
     - docker-compose up -d --force-recreate
   #only:
     #- master
-  tags:
-    - shell
+  #tags:
+    #- shell
