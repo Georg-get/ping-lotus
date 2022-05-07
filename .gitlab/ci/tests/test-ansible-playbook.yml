@@ -4,5 +4,6 @@ test ansible playbook:
   script:
     - apt update && apt install ansible -y
     - ansible-playbook ./infrastructure/ansible/ansible.yml
+    - cd ${CI_PROJECT_DIR}/ ; docker-compose -f docker-compose_test.yml up -d
     - curl localhost
     - ansible-playbook ./infrastructure/ansible/rm_nginx.yml
