@@ -2,13 +2,9 @@ telegram job:
   stage: telegram
   script:
       - sh ci-notify.sh "your success message ✅"
-      
 
 notify_error:
-    stage: notify
-    script:
-        - sh ci-notify.sh "your fail message ❌"
-    when: on_failure
-
-     #only:
-    #- master
+  stage: notify
+  script:
+      - sh ci-notify.sh "your fail message ❌"
+  when: on_failure
