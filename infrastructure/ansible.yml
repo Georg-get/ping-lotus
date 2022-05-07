@@ -75,11 +75,8 @@
       copy:
         src: "{{playbook_dir}}/default"
         dest: /etc/nginx/sites-enabled/default
-        validate: nginx -t 
-      register: nginxstate
 
     - name: registert nginx service | nginx
       service:
         name: nginx
         state: reloaded
-      when: nginxstate.changed
