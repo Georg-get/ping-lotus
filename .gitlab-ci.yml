@@ -4,10 +4,6 @@ stages:
   - deploy
   - telegram
 
-variables:
-  TELEGRAM_BOT_TOKEN: "1"
-  TELEGRAM_GROUP_ID: "2" 
-
 include:
   - .gitlab/ci/tests/test.yml # везде
   #- .gitlab/ci/image.yml # только в мастер ветке
