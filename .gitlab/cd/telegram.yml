@@ -1,6 +1,14 @@
 telegram job:
   stage: telegram
   script:
-  - curl -s -X POST https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage -d "chat_id=$TELEGRAM_GROUP_ID" -d text="Проект ${CI_PROJECT_NAME},  ветки ${CI_COMMIT_BRANCH} ,успешно задиплоян!✅"
-  only:
-    - master
+      - sh ci-notify.sh "your success message ✅"
+      
+
+notify_error:
+    stage: notify
+    script:
+        - sh ci-notify.sh "your fail message ❌"
+    when: on_failure
+
+     #only:
+    #- master
