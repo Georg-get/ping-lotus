@@ -3,8 +3,8 @@ telegram job:
   script:
       - sh ci-notify.sh "your success message ✅"
 
-notify_error:
-  stage: notify
-  script:
-      - sh ci-notify.sh "your fail message ❌"
-  when: on_failure
+#notify_error:
+  #stage: notify
+  #script:
+      #- sh ci-notify.sh "your fail message ❌"
+  #when: on_failure
