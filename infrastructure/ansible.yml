@@ -38,13 +38,6 @@
         state: started
         enabled: yes
 
-    - name: add remote ubuntu" user to "docker" group | add docker group
-      remote_user: ubuntu
-      user:
-        name: ubuntu
-        group: docker
-        append: yes
-
 
     - name: install docker-compose | docker-compose
       remote_user: ubuntu
@@ -52,13 +45,7 @@
         url : https://github.com/docker/compose/releases/download/1.29.2/docker-compose-Linux-x86_64
         dest: /usr/local/bin/docker-compose
         mode: 'u+x,g+x'
-
-
-    - name: install git | git
-      apt:  
-        name: git 
-        state: latest
-        update_cache: true
+        
 
     - name: install nginx | nginx
       apt:  
