@@ -1,8 +1,9 @@
-deploy job:
+deploy:
   stage: deploy
   before_script:
     - docker login -u gitlab-ci-token -p ${CI_JOB_TOKEN} ${CI_REGISTRY}
   script:
+    - rm /var/www/docker-compose.yml
     - cp ./docker-compose.yml /var/www
     - cd /var/www
     - docker-compose pull 

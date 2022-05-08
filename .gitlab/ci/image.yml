@@ -1,5 +1,5 @@
 
-build image job:
+build docker:
   stage: build docker
   image: docker:stable
   services:

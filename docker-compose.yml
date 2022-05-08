@@ -1,11 +1,9 @@
 version: '3.7'
 
 services:
-  django:                       # название 
+  django:                   # название 
     image: registry.gitlab.com/georg-get/ping-lotus:latest
     #volumes:
       #- .:/ping-lotus
     ports:
       - "127.0.0.1:8000:8000"      # порт наружу
-
-      # main/* mysite/* manage.py requirements.txt ./ping-lotus/ 

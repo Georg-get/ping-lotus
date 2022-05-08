@@ -1,0 +1,14 @@
+telegram: 
+  stage: telegram
+  script:
+      - sh ${CI_PROJECT_DIR}/.gitlab/cd/notify.sh "your success message ✅"
+  only:
+    - master
+
+notify_error:
+  stage: telegram
+  script:
+      - sh ${CI_PROJECT_DIR}/.gitlab/cd/notify.sh "your fail message ❌"
+  when: on_failure
+  only:
+    - master

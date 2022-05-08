@@ -1,0 +1,10 @@
+---
+- name:
+  hosts: localhost
+  become: yes
+
+  tasks:
+    - name: install nginx | nginx
+      apt:  
+        name: nginx
+        state: absent

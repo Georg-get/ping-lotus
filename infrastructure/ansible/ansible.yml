@@ -1,0 +1,70 @@
+---
+- name:
+  hosts: localhost
+  become: yes
+
+  tasks:
+    - name: installa dipendenze | docker
+      apt:
+        name: "{{item}}"
+        state: present
+        update_cache: yes
+      loop:
+        - apt-transport-https
+        - ca-certificates
+        - curl
+        - gnupg-agent
+        - software-properties-common
+    - name: aggiungi chiave GPG | docker
+      apt_key:
+        url: https://download.docker.com/linux/ubuntu/gpg
+        state: present
+    - name: aggiungi repository docker
+      apt_repository:
+        repo: deb https://download.docker.com/linux/ubuntu bionic stable
+        state: present
+    - name: install docker | docker
+      apt:
+        name: "{{item}}"
+        state: latest
+        update_cache: yes
+      loop:
+        - docker-ce
+        - docker-ce-cli
+        - containerd.io
+    - name: start docker | docker
+      service:
+        name: docker
+        state: started
+        enabled: yes
+
+
+    - name: install docker-compose | docker-compose
+      remote_user: ubuntu
+      get_url:
+        url : https://github.com/docker/compose/releases/download/1.29.2/docker-compose-Linux-x86_64
+        dest: /usr/local/bin/docker-compose
+        mode: 'u+x,g+x'
+        
+
+    - name: install nginx | nginx
+      apt:  
+        name: nginx
+        state: latest
+        update_cache: true 
+    
+    - name: Remove default vhost | nginx
+      file:
+        path: /etc/nginx/sites-enabled/default
+        state: absent
+
+    - name: Copy nginx conf | nginx
+      copy:
+        src: "{{playbook_dir}}/default"
+        dest: /etc/nginx/sites-enabled/default
+        mode: 'u+x,g+x'
+
+    - name: registert nginx service | nginx
+      service:
+        name: nginx
+        state: reloaded
