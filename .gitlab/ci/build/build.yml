@@ -1,0 +1,8 @@
+--- 
+test: 
+  image: "python:latest"
+  script: 
+    - "pip install -r requirements.txt"
+    - "python manage.py runserver"
+  stage: build
+  #when: always
