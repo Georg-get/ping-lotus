@@ -3,6 +3,6 @@ build:
   image: "python:latest"
   script: 
     - "pip install -r requirements.txt"
-    - "python manage.py runserver --noinput"
+    - "python manage.py runserver 0.0.0.0:8000"
   stage: build
   #when: always
