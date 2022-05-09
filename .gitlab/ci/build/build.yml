@@ -1,5 +1,5 @@
 --- 
-test: 
+build: 
   image: "python:latest"
   script: 
     - "pip install -r requirements.txt"
