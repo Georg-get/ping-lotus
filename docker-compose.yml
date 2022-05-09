@@ -7,3 +7,15 @@ services:
       #- .:/ping-lotus
     ports:
       - "127.0.0.1:8000:8000"      # порт наружу
+
+
+  sonar:
+    image: sonarqube:6.4-alpine
+    ports:
+      - 9000:9000
+      - 9092:9092
+    volumes:
+      - $SONAR_DIR/.sonarqube/conf:/opt/sonarqube/conf
+      - $SONAR_DIR/.sonarqube/data:/opt/sonarqube/data
+      - $SONAR_DIR/.sonarqube/extensions:/opt/sonarqube/extensions
+      - $SONAR_DIR/.sonarqube/plugins:/opt/sonarqube/lib/bundled-plugins

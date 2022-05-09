@@ -1,7 +1,8 @@
-test:
-  image: python:latest
+--- 
+test: 
+  image: "python:latest"
+  script: 
+    - "pip install -r requirements.txt"
+    - "python manage.py test --noinput"
   stage: test
-  script:
-    - pip install -r requirements.txt
-    - python manage.py test --noinput 
   #when: always

@@ -1,6 +1,6 @@
 
 build docker:
-  stage: build docker
+  stage: build image
   image: docker:stable
   services:
     - docker:dind
