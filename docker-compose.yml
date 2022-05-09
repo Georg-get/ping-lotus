@@ -10,10 +10,9 @@ services:
 
 
   sonar:
-    image: sonarqube:6.4-alpine
+    image: sonarqube:8.9-community
     ports:
       - 9000:9000
-      - 9092:9092
     volumes:
       - $SONAR_DIR/.sonarqube/conf:/opt/sonarqube/conf
       - $SONAR_DIR/.sonarqube/data:/opt/sonarqube/data
