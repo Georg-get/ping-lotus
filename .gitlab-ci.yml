@@ -1,6 +1,6 @@
 --- 
 include:
-  - .gitlab/ci/tests/build/build.yml # везде # на ранере гитлаба
+  - .gitlab/ci/build/build.yml # везде # на ранере гитлаба
   - .gitlab/ci/tests/test.yml # везде # на ранере гитлаба
   #- .gitlab/ci/tests/sonarqube.yml # везде # на ранере гитлаба
   - .gitlab/ci/tests/test-ansible-playbook.yml # везде # на ранере гитлаба
