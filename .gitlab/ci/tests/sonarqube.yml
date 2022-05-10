@@ -13,7 +13,3 @@ sonarqube:
   script: 
     - sonar-scanner
   allow_failure: true
-  only:
-    - merge_requests
-    - master # or the name of your main branch
-    - develop
