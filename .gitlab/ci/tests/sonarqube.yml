@@ -1,6 +1,6 @@
-sonarqube-check:
+sonarqube:
   stage: sonarqube
-  image:
+  image: 
     name: sonarsource/sonar-scanner-cli:latest
     entrypoint: [""]
   variables:
@@ -10,6 +10,10 @@ sonarqube-check:
     key: "${CI_JOB_NAME}"
     paths:
       - .sonar/cache
-  script:
+  script: 
     - sonar-scanner
   allow_failure: true
+  only:
+    - merge_requests
+    - master # or the name of your main branch
+    - develop
