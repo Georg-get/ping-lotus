@@ -9,7 +9,7 @@ include:
 
 stages: 
   - test
-  - sonarqube
+  - sonarqube-check
   - "test ansible playbook"
   - "build image"
   - deploy
