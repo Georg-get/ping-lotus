@@ -10,7 +10,7 @@ services:
 
 
   sonar:
-    image: sonarqube:9.4-developer
+    image: sonarqube:8.9.8-community
     ports:
       - 9000:9000
     volumes:
