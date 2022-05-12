@@ -10,6 +10,13 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - uses: ./.github/actions/ansible
+    - uses: ./infrastructure/ansible/
       with: 
         playbook: ansible.yml
+
+    - name: curl
+      run: curl localhost
+
+    - uses: ./infrastructure/ansible/
+      with: 
+        playbook: rm_nginx.yml
