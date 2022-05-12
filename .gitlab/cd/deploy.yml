@@ -6,7 +6,7 @@ deploy:
     - rm /var/www/docker-compose.yml
     - cp ./docker-compose.yml /var/www
     - cd /var/www
-    - docker-compose pull 
+    - docker-compose pull # docker-compose down -v --rmi all
     - docker-compose stop  www_django_1|| true #&& docker-compose rm ${CI_REGISTRY_IMAGE} || true
     - docker-compose up -d --force-recreate
   only:
