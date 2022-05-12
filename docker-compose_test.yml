@@ -1,6 +1,7 @@
 version: '3.7'
                     #Для тестирование локальных образов
 services:
+
   django:                  
     build: .
     ports:
