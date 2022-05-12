@@ -7,3 +7,14 @@ services:
       #- .:/ping-lotus
     ports:
       - "127.0.0.1:8000:8000"      # порт наружу
+
+
+  sonar:
+    image: sonarqube:8.9.8-community
+    ports:
+      - 9000:9000
+    volumes:
+      - /var/www/.sonarqube/conf:/opt/sonarqube/conf
+      - /var/www/.sonarqube/data:/opt/sonarqube/data
+      - /var/www/.sonarqube/extensions:/opt/sonarqube/extensions
+      - /var/www/.sonarqube/plugins:/opt/sonarqube/lib/bundled-plugins
