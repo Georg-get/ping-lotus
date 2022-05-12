@@ -1,3 +1,4 @@
+---
 telegram: 
   stage: telegram
   script:

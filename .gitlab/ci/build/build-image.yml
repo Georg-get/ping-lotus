@@ -1,4 +1,4 @@
-
+---
 build docker:
   stage: build image
   image: docker:stable
