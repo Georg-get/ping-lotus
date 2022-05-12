@@ -1,14 +1,16 @@
 version: '3.7'
 
 services:
-  django:                   # название 
+  django:                  
     image: registry.gitlab.com/georg-get/ping-lotus:latest
+    container_name: Django
     restart: unless-stopped
     ports:
-      - 8000:8000     # порт наружу
+      - 8000:8000    
 
   postgres:
     image: postgres:14.2-alpine
+    container_name: PostgreSQL
     depends_on:
       - django
     restart: unless-stopped
@@ -23,6 +25,7 @@ services:
 
   sonar:
     image: sonarqube:8.9.8-community
+    container_name: SonarQube
     depends_on:
       - postgres
     restart: unless-stopped    

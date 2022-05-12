@@ -2,14 +2,16 @@ version: '3.7'
                     #Для тестирование локальных образов
 services:
 
-  django:                  
+  django:                
     build: .
+    container_name: www_django_1
     restart: unless-stopped
     ports:
       - 8000:8000
 
   postgres:
     image: postgres:14.2-alpine
+    container_name: PostgreSQL
     depends_on:
       - django
     restart: unless-stopped
