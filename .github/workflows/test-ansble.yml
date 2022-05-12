@@ -12,7 +12,7 @@ jobs:
     - uses: actions/checkout@v3
     - name: install ansible and start test ansible-playbook
       run: |
-        - apt update && apt install ansible -y
+        - pip install ansible -y
         - ansible-playbook ./infrastructure/ansible/ansible.yml
         - curl localhost
         - ansible-playbook ./infrastructure/ansible/rm_nginx.yml
