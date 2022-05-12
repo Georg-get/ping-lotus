@@ -4,11 +4,15 @@ services:
 
   django:                  
     build: .
+    restart: unless-stopped
     ports:
-      - "127.0.0.1:8000:8000"
+      - 8000:8000
 
   postgres:
     image: postgres:14.2-alpine
+    depends_on:
+      - django
+    restart: unless-stopped
     ports:
       - 5432:5432
     volumes:
