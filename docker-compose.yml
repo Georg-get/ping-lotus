@@ -6,7 +6,9 @@ services:
     container_name: Django
     restart: unless-stopped
     ports:
-      - 8000:8000    
+      - 8000:8000   
+    networks:
+      - app 
 
   postgres:
     image: postgres:14.2-alpine
@@ -22,6 +24,8 @@ services:
       - POSTGRES_PASSWORD=$POSTGRES_PASSWORD
       - POSTGRES_USER=$POSTGRES_USER
       - POSTGRES_DB=$POSTGRES_DB
+    networks:
+      - app
 
   sonar:
     image: sonarqube:8.9.8-community
@@ -36,3 +40,13 @@ services:
       - /var/www/.sonarqube/data:/opt/sonarqube/data
       - /var/www/.sonarqube/extensions:/opt/sonarqube/extensions
       - /var/www/.sonarqube/plugins:/opt/sonarqube/lib/bundled-plugins
+    networks:
+      - app
+
+
+#volumes:
+
+
+networks:
+  app:
+    driver: bridge
