@@ -6,7 +6,7 @@ services:
     container_name: Django
     restart: unless-stopped
     ports:
-      - 8000:8000   
+      - $DJANGO_PORT:$DJANGO_PORT   
     networks:
       - app 
 
@@ -17,7 +17,7 @@ services:
       - django
     restart: unless-stopped
     ports:
-      - 5432:5432
+      - $POSTGRES_PORT:$POSTGRES_PORT
     volumes:
     - /var/postgres:/var/lib/postgresql/data
     environment:
@@ -34,7 +34,7 @@ services:
       - postgres
     restart: unless-stopped    
     ports:
-      - 9000:9000
+      - $SONARQUBE_PORT:$SONARQUBE_PORT
     volumes:
       - /var/www/.sonarqube/conf:/opt/sonarqube/conf
       - /var/www/.sonarqube/data:/opt/sonarqube/data
