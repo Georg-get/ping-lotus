@@ -1,7 +1,33 @@
 version: '3.7'
                     #Для тестирование локальных образов
 services:
-  django:                  
+  django:                
     build: .
+    container_name: Django
+    restart: unless-stopped
     ports:
-      - "127.0.0.1:8000:8000"
+      - 8000:8000
+    networks:
+      - app 
+
+  postgres:
+    image: postgres:14.2-alpine
+    container_name: PostgreSQL
+    depends_on:
+      - django
+    restart: unless-stopped
+    ports:
+      - 5432:5432
+    volumes:
+    - /var/postgres:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=S3cret
+      - POSTGRES_USER=citizix_user
+      - POSTGRES_DB=citizix_db
+    networks:
+      - app 
+
+
+networks:
+  app:
+    driver: bridge
