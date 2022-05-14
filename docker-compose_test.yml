@@ -3,10 +3,14 @@ version: '3.7'
 services:
   django:                
     build: .
+    command: sh -c "gunicorn --bind 0.0.0.0:8000 mysite.wsgi
     container_name: Django
     restart: unless-stopped
-    ports:
-      - 8000:8000
+    expose:
+      - 8000
+    volumes:
+      - ./main:/main
+      - static_data:/main/static  
     networks:
       - app 
 
@@ -17,9 +21,9 @@ services:
       - django
     restart: unless-stopped
     ports:
-      - 5432:5432
+      - "5432:5432"
     volumes:
-    - /var/postgres:/var/lib/postgresql/data
+      - /var/postgres:/var/lib/postgresql/data
     environment:
       - POSTGRES_PASSWORD=S3cret
       - POSTGRES_USER=citizix_user
@@ -27,6 +31,35 @@ services:
     networks:
       - app 
 
+  nginx:
+    image: nginx:1.19.8-alpine
+    depends_on:
+      - postgres
+    container_name: Nginx
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - static_data:/usr/src/app/static 
+      - ./nginx-conf.d:/etc/nginx/conf.d
+      #- etc-letsencrypt:/etc/letsencrypt
+    networks:
+      - app   
+
+  #certbot:
+    #image: certbot/certbot
+    #depends_on:
+      #- nginx
+    #container_name: Certbot
+    #volumes:
+      #- etc-letsencrypt:/etc/letsencrypt
+      #- static_data:/var/www/html
+    #command: certonly --webroot --webroot-path=/var/www/html --email ujif12349@mail.ru --agree-tos --no-eff-email -d test.world-itech.ru
+
+volumes:
+  static_data:
+  #etc-letsencrypt:
 
 networks:
   app:

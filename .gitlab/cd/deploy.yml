@@ -5,6 +5,8 @@ deploy:
     - docker login -u gitlab-ci-token -p ${CI_JOB_TOKEN} ${CI_REGISTRY}
   script:
     - rm /var/www/docker-compose.yml
+    - rm /var/www/html/default.conf
+    - cp ./nginx-conf.d/default.conf /var/www
     - cp ./docker-compose.yml /var/www
     - cd /var/www
     - docker-compose pull # docker-compose down -v --rmi all
