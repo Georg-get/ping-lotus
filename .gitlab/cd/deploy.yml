@@ -9,8 +9,8 @@ deploy:
     - cp ./nginx-conf.d/default.conf /var/www/nginx-conf.d/
     - cp ./docker-compose.yml /var/www
     - cd /var/www
-    - docker-compose pull # docker-compose down -v --rmi all
-    - docker-compose stop  Django|| true #&& docker-compose rm ${CI_REGISTRY_IMAGE} || true
+    - docker-compose down -v --rmi all
+    #- docker-compose stop  Django|| true #&& docker-compose rm ${CI_REGISTRY_IMAGE} || true
     - docker-compose up -d --force-recreate
   only:
     - master
