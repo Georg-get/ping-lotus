@@ -5,5 +5,3 @@ test ansible playbook:
   script:
     - apt update && apt install ansible -y
     - ansible-playbook ./infrastructure/ansible/ansible.yml
-    - curl localhost
-    - ansible-playbook ./infrastructure/ansible/rm_nginx.yml
