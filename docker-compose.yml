@@ -59,8 +59,6 @@ services:
       - /var/www/.sonarqube/data:/opt/sonarqube/data
       - /var/www/.sonarqube/extensions:/opt/sonarqube/extensions
       - /var/www/.sonarqube/plugins:/opt/sonarqube/lib/bundled-plugins
-    networks:
-      - app
 
 volumes:
   www-html:
