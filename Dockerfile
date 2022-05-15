@@ -1,6 +1,5 @@
 FROM python:3.9-alpine                            
-
-EXPOSE 8000                                 
+                               
 WORKDIR /ping-lotus                            
 
 ENV PYTHONDONTWRITEBYTECODE=1\                  
@@ -8,7 +7,7 @@ ENV PYTHONDONTWRITEBYTECODE=1\
 
 COPY . .                                      
 
-RUN pip install --upgrade pip \
-    pip install --no-cache-dir -r requirements.txt             
-
-CMD sh  cd ping-lotus ; python3 manage.py runserver 0.0.0.0:8000
+RUN apk add --update --no-cache --virtual .tmp-build-deps \
+        gcc libc-dev linux-headers postgresql-dev && \
+    pip install --upgrade pip && \
+    pip install --no-cache-dir -r requirements.txt

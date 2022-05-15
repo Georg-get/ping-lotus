@@ -1,32 +1,69 @@
-version: '3.7'
+version: '3.9'
                     #Для тестирование локальных образов
 services:
+
   django:                
     build: .
+    command: sh -c "gunicorn --bind 0.0.0.0:8000 mysite.wsgi"
     container_name: Django
     restart: unless-stopped
-    ports:
-      - 8000:8000
+    expose:
+      - 8000
+    volumes:
+      - ./mysite:/mysite
+      - www-html:/ping-lotus/main/
     networks:
       - app 
 
-  postgres:
-    image: postgres:14.2-alpine
-    container_name: PostgreSQL
+  #postgres:
+    #image: postgres:14.2-alpine
+    #container_name: PostgreSQL
+    #depends_on:
+      #- django
+    #restart: unless-stopped
+    #ports:
+      #- "5432:5432"
+    #volumes:
+      #- /var/postgres:/var/lib/postgresql/data
+    #environment:
+      #- POSTGRES_PASSWORD=S3cret
+      #- POSTGRES_USER=citizix_user
+      #- POSTGRES_DB=citizix_db
+    #networks:
+      #- app 
+
+  nginx:
+    image: nginx:1.19.8-alpine
     depends_on:
+      #- postgres
       - django
+    container_name: Nginx
     restart: unless-stopped
     ports:
-      - 5432:5432
+      - "80:80"
+      - "443:443"
     volumes:
-    - /var/postgres:/var/lib/postgresql/data
-    environment:
-      - POSTGRES_PASSWORD=S3cret
-      - POSTGRES_USER=citizix_user
-      - POSTGRES_DB=citizix_db
+      - www-html:/var/www/html
+      - ./nginx-conf.d:/etc/nginx/conf.d
+      #- etc-letsencrypt:/etc/letsencrypt
     networks:
-      - app 
+      - app   
 
+  #certbot:
+    #image: certbot/certbot
+    #depends_on:
+      #- nginx
+    #container_name: Certbot
+    #volumes:
+      #- etc-letsencrypt:/etc/letsencrypt
+      #- www-html:/var/www/html
+    #command: certonly --webroot --webroot-path=/var/www/html --email ujif12349@yandex.ru --agree-tos --no-eff-email -d lotus.ru.com
+    #networks:
+      #- app
+
+volumes:
+  www-html:
+  #etc-letsencrypt:
 
 networks:
   app:

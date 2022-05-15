@@ -45,26 +45,3 @@
         url : https://github.com/docker/compose/releases/download/1.29.2/docker-compose-Linux-x86_64
         dest: /usr/local/bin/docker-compose
         mode: 'u+x,g+x'
-        
-
-    - name: install nginx | nginx
-      apt:  
-        name: nginx
-        state: latest
-        update_cache: true 
-    
-    - name: Remove default vhost | nginx
-      file:
-        path: /etc/nginx/sites-enabled/default
-        state: absent
-
-    - name: Copy nginx conf | nginx
-      copy:
-        src: "{{playbook_dir}}/default"
-        dest: /etc/nginx/sites-enabled/default
-        mode: 'u+x,g+x'
-
-    - name: registert nginx service | nginx
-      service:
-        name: nginx
-        state: reloaded

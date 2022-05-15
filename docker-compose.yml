@@ -1,14 +1,19 @@
-version: '3.7'
+version: '3.9'
 
 services:
+
   django:                  
     image: registry.gitlab.com/georg-get/ping-lotus:latest
+    command: sh -c "gunicorn --bind 0.0.0.0:8000 mysite.wsgi"
     container_name: Django
     restart: unless-stopped
-    ports:
-      - $DJANGO_PORT:$DJANGO_PORT   
+    expose:
+      - $DJANGO_PORT
+    volumes:
+      - ./mysite:/mysite
+      - www-html:/ping-lotus/main/
     networks:
-      - app 
+      - app  
 
   postgres:
     image: postgres:14.2-alpine
@@ -27,11 +32,25 @@ services:
     networks:
       - app
 
+  nginx:
+    image: nginx:1.19.8-alpine
+    depends_on:
+      - postgres
+    container_name: Nginx
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    volumes:
+      - www-html:/var/www/html
+      - ./nginx-conf.d:/etc/nginx/conf.d
+    networks:
+      - app  
+
   sonar:
     image: sonarqube:8.9.8-community
     container_name: SonarQube
     depends_on:
-      - postgres
+      - nginx
     restart: unless-stopped    
     ports:
       - $SONARQUBE_PORT:$SONARQUBE_PORT
@@ -43,9 +62,8 @@ services:
     networks:
       - app
 
-
-#volumes:
-
+volumes:
+  www-html:
 
 networks:
   app:
