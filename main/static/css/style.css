@@ -30,7 +30,7 @@ a                                   { text-decoration:none;   }
 .navbar-toggler:focus               { box-shadow: 0 0 0 0; }
 .card +
 .modal-dialog .card img             { height: 8rem; }
-.footer                             { top: 10rem; height: 10rem; background: linear-gradient(to top, #dd3290, #ffffff);}
+.footer                             { background: linear-gradient(to top, #dd3290, #ffffff);}
 /*----------Модальные окна---------*/
 .offcanvas-start                    { top: 55px; }
 .offcanvas-backdrop                 { top: 0px;  }
