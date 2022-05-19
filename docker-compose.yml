@@ -3,7 +3,7 @@ version: '3.9'
 services:
 
   django:                  
-    image: ${CI_REGISTRY}/georg-get/ping-lotus:latest
+    image: registry.gitlab.com/georg-get/ping-lotus:latest
     command: sh -c "gunicorn --bind 0.0.0.0:8000 mysite.wsgi"
     container_name: Django
     restart: unless-stopped
