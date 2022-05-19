@@ -14,3 +14,6 @@ stages:
   - "build image"
   - deploy
   - telegram
+
+variables:
+  ANSIBLE_PLABOOK: "./infrastructure/ansible/ansible.yml"

@@ -28,7 +28,9 @@ a                                   { text-decoration:none;   }
 .navbar-toggler                     { border-radius: 0; border: 0 none; }
 .navbar-toggler:focus:active        { background-color: #dd3290; }
 .navbar-toggler:focus               { box-shadow: 0 0 0 0; }
-.card                               { height: 8rem; }
+.card +
+.modal-dialog .card img             { height: 8rem; }
+.footer                             { background: linear-gradient(to top, #dd3290, #ffffff);}
 /*----------Модальные окна---------*/
 .offcanvas-start                    { top: 55px; }
 .offcanvas-backdrop                 { top: 0px;  }
@@ -53,7 +55,7 @@ a                                   { text-decoration:none;   }
 /*----------Нижний бар-------------*/
 #nav                                { display: flex; flex-direction: column; margin: 0px; padding-top: 0px;
                                       border-width: 1px; border-bottom-style: solid ; border-color: #e2e2e2; }
-#logo                               { float:left; display:flex; align-items:center; height:70px; margin:4px auto 4px; height:50px;  }
+#logo                               { float:left; display:flex; align-items:center; height:70px; margin:4px auto 4px;  }
 #bottom-nav                         { padding: 0 0 0 0; border-width: 1px; border-top-style: solid; border-color: #e0e0e0; }
 #button-search                      { padding-left: 0.75rem; border-radius: 0; border: 0; border-width: 1px; border-bottom-style: solid; 
                                       border-color: #e0e0e0; }
@@ -93,11 +95,12 @@ a                                   { text-decoration:none;   }
     .btn-nav.nav-link,       
     #authentication         { padding: 0.5rem 1rem 0.5rem 1rem; }
     .card                   { height: 6.5rem; }
+    .modal-dialog .card img { height: 6.4rem; }
 }
 @media (max-width: 992px) {/*---Breakpoint:Смартфон---*/
-    .modal-fullscreen                   { width: 100vw;  }
+    .modal-fullscreen                   { width: 100vw; }
     .offcanvas-start                    { top: 55px; }
-    .offcanvas-backdrop                 { top: 55px;  }
+    .offcanvas-backdrop                 { top: 55px; }
     .r.bi                   { padding-left: 1rem; padding-right: 1rem;}
     .l.bi                   { padding-left: 1rem; padding-right: 1rem;}
     a.btn-nav.nav-link      { flex-direction: row-reverse!important; justify-content: flex-end; }
@@ -115,9 +118,13 @@ a                                   { text-decoration:none;   }
     #nav-categories         { margin-right: unset!important; }
     #v2-search              { display: flex; }
     .nav-item.me-auto.flex  { display: none; }
+    .card                   { height: 8rem; }
+    .modal-dialog .card img { height: 7.9rem; }
     #navbarSupportedContent.animation.dropdown-menu.show {visibility: visible;}
 @media (max-width: 576px) {
     #v2-search              { display: none; }
+    .card                   { height: 8rem; }
+    .modal-dialog .card img { height: 7.9rem; }
 }
 }/*===================================================*/
 /*=================================================================================================================================*/

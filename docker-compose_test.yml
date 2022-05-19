@@ -15,28 +15,28 @@ services:
     networks:
       - app 
 
-  #postgres:
-    #image: postgres:14.2-alpine
-    #container_name: PostgreSQL
-    #depends_on:
-      #- django
-    #restart: unless-stopped
-    #ports:
-      #- "5432:5432"
-    #volumes:
-      #- /var/postgres:/var/lib/postgresql/data
-    #environment:
-      #- POSTGRES_PASSWORD=S3cret
-      #- POSTGRES_USER=citizix_user
-      #- POSTGRES_DB=citizix_db
-    #networks:
-      #- app 
+  postgres:
+    image: postgres:14.2-alpine
+    container_name: PostgreSQL
+    depends_on:
+      - django
+    restart: unless-stopped
+    ports:
+      - "5432:5432"
+    volumes:
+      - /var/postgres:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=S3cret
+      - POSTGRES_USER=citizix_user
+      - POSTGRES_DB=citizix_db
+    networks:
+      - app 
 
   nginx:
     image: nginx:1.19.8-alpine
     depends_on:
-      #- postgres
-      - django
+      - postgres
+      #- django
     container_name: Nginx
     restart: unless-stopped
     ports:
