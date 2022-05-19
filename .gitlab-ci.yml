@@ -17,4 +17,3 @@ stages:
 
 variables:
   ANSIBLE_PLABOOK: "./infrastructure/ansible/ansible.yml"
-  #NAME_DOCKER_IMAGE: "My_Django"
