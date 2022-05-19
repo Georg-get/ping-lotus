@@ -1,8 +1,8 @@
 --- 
 include:
-  #- local: /.gitlab/ci/tests/test.yml # везде # на ранере гитлаба
+  - local: /.gitlab/ci/tests/test.yml # везде # на ранере гитлаба
   - local: /.gitlab/ci/tests/sonarqube.yml # везде # на ранере гитлаба
- # - local: /.gitlab/ci/tests/test-ansible-playbook.yml # только в мастер ветке # на ранере гитлаба
+  - local: /.gitlab/ci/tests/test-ansible-playbook.yml # только в мастер ветке # на ранере гитлаба
   - local: /.gitlab/ci/build/build-image.yml # только в мастер ветке # на ранере гитлаба
   - local: /.gitlab/cd/deploy.yml # только в мастер ветке # на собственом ранере
   - local: /.gitlab/cd/telegram.yml # только в мастер ветке # на ранере гитлаба

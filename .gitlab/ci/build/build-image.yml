@@ -9,6 +9,6 @@ build docker:
     - docker build -t ${CI_REGISTRY_IMAGE}:latest .
     - docker push ${CI_REGISTRY_IMAGE}:latest
 
-  #only:
-    #- master
+  only:
+    - master
     #- merge_requests
