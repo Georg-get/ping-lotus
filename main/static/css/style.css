@@ -30,7 +30,8 @@ a                                   { text-decoration:none;   }
 .navbar-toggler:focus               { box-shadow: 0 0 0 0; }
 .card +
 .modal-dialog .card img             { height: 8rem; }
-.footer                             { background: linear-gradient(to top, #dd3290, #ffffff);}
+.footer                             { background: linear-gradient(to top, #df6baa, #ffffff);}
+
 /*----------Модальные окна---------*/
 .offcanvas-start                    { top: 55px; }
 .offcanvas-backdrop                 { top: 0px;  }
@@ -55,7 +56,7 @@ a                                   { text-decoration:none;   }
 /*----------Нижний бар-------------*/
 #nav                                { display: flex; flex-direction: column; margin: 0px; padding-top: 0px;
                                       border-width: 1px; border-bottom-style: solid ; border-color: #e2e2e2; }
-#logo                               { float:left; display:flex; align-items:center; height:70px; margin:4px auto 4px;  }
+#logo                               { float:left; display:flex; align-items:center; height:60px; margin:4px auto 4px;  }
 #bottom-nav                         { padding: 0 0 0 0; border-width: 1px; border-top-style: solid; border-color: #e0e0e0; }
 #button-search                      { padding-left: 0.75rem; border-radius: 0; border: 0; border-width: 1px; border-bottom-style: solid; 
                                       border-color: #e0e0e0; }
@@ -98,9 +99,9 @@ a                                   { text-decoration:none;   }
     .modal-dialog .card img { height: 6.4rem; }
 }
 @media (max-width: 992px) {/*---Breakpoint:Смартфон---*/
-    .modal-fullscreen                   { width: 100vw; }
-    .offcanvas-start                    { top: 55px; }
-    .offcanvas-backdrop                 { top: 55px; }
+    .modal-fullscreen       { width: 100vw; }
+    .offcanvas-start        { top: 55px; }
+    .offcanvas-backdrop     { top: 55px; }
     .r.bi                   { padding-left: 1rem; padding-right: 1rem;}
     .l.bi                   { padding-left: 1rem; padding-right: 1rem;}
     a.btn-nav.nav-link      { flex-direction: row-reverse!important; justify-content: flex-end; }
