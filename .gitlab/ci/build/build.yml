@@ -1,0 +1,8 @@
+---
+build:
+  stage: build
+  image: docker:stable
+  services:
+    - docker:dind
+  script:
+    - docker build -f $NAME_DOCKERFILE_BUILD .
