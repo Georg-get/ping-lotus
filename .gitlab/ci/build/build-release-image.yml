@@ -1,6 +1,6 @@
 ---
-build docker:
-  stage: build image
+build release image:
+  stage: build release image
   image: docker:stable
   services:
     - docker:dind
@@ -10,4 +10,5 @@ build docker:
     - docker push ${CI_REGISTRY_IMAGE}:latest
 
   only:
-    - master
+    - master #
+  # новый релизный тег 

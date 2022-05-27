@@ -2,18 +2,20 @@
 include:
   - local: /.gitlab/ci/build/build.yml # везде # на ранере гитлаба
   - local: /.gitlab/ci/tests/test.yml # везде # на ранере гитлаба
-  - local: /.gitlab/ci/tests/sonarqube.yml # везде # на ранере гитлаба
   - local: /.gitlab/ci/tests/test-ansible-playbook.yml # только в мастер ветке # на ранере гитлаба
-  - local: /.gitlab/ci/build/build-image.yml # только в мастер ветке # на ранере гитлаба
-  - local: /.gitlab/cd/deploy.yml # только в мастер ветке # на собственом ранере
-  - local: /.gitlab/cd/telegram.yml # только в мастер ветке # на ранере гитлаба
+  - local: /.gitlab/ci/tests/sonarqube.yml # только в мастер ветке # на ранере гитлаба
+  - local: /.gitlab/ci/build/creation-release-tag.yml # только в мастер ветке # на ранере гитлаба 
+  - local: /.gitlab/ci/build/build-release-image.yml # только в релизном теге # на ранере гитлаба
+  - local: /.gitlab/cd/deploy.yml # только в релизном теге  # на собственом ранере
+  - local: /.gitlab/cd/telegram.yml # только в релизном теге  # на ранере гитлаба
 
 stages: 
   - build
   - test
-  - sonarqube
   - "test ansible playbook"
-  - "build image"
+  - sonarqube
+  - "creation release tag"
+  - "build release image"
   - deploy
   - telegram
 

@@ -5,3 +5,5 @@ test ansible playbook:
   script:
     - apt update && apt install ansible -y
     - ansible-playbook $ANSIBLE_PLABOOK
+  only:
+    - master
