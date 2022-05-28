@@ -8,7 +8,7 @@ a                                   { text-decoration:none;   }
 /*=================================*/ 
 /*----------Кнопки\Меню------------*/
 .btn-outline-success                { color: #798389;}
-.btn-outline-success:hover          { color: #dd3290; background-color: #f8f9fa;  }
+.btn-outline-success:hover          { color: #dd3290; background-color: #f8f9fa; border-color: #f8f9fa; }
 .btn-outline-success:active         { color: #fff; background-color: #dd3290; }
 .btn-outline-success:focus          { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
 .btn-outline-success:focus:active   { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
@@ -73,6 +73,9 @@ a                                   { text-decoration:none;   }
 #authentication                     { padding: 1rem 1rem 1rem 0.5rem; }
 #v2-search                          { display: none; }
 /*=================================*/
+.b.nav-link                         { padding: 0rem 0.1rem 0.1rem 0.1rem; border-width: 0; border-left-style: none }
+.button-send                        { border-radius: 0; border-color: #e2e2e2; background-color: #fff; border-left-width: 0px; }
+.email-send                         { border-radius: 0; border-color: #e2e2e2; }
 /*=================================================================================================================================*/
 /*--------------------------Breakpoints--------------------------------------------------------------------------------------------*/
 @media (max-width: 1400px) {
@@ -90,6 +93,7 @@ a                                   { text-decoration:none;   }
 @media (max-width: 1200px) {
     .nav-link               { font-size: 0; }
     .a.nav-link             { font-size:small; padding: 0.2rem 0.5rem 0.2rem 0.5rem; }
+    .b.nav-link             { font-size:small; }
     .r.bi                   { padding-left: 0rem; font-size: x-large; }
     .l.bi                   { padding-right: 0rem; font-size: x-large; }
     #catalog .bi.bi-list    { font-size: x-large; }
@@ -124,10 +128,11 @@ a                                   { text-decoration:none;   }
     .card                   { height: 8rem; }
     .modal-dialog .card img { height: 7.9rem; }
     #navbarSupportedContent.animation.dropdown-menu.show {visibility: visible;}
+}
 @media (max-width: 576px) {
     #v2-search              { display: none; }
     .card                   { height: 8rem; }
     .modal-dialog .card img { height: 7.9rem; }
 }
-}/*===================================================*/
+/*===================================================*/
 /*=================================================================================================================================*/

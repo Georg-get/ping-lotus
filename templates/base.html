@@ -24,41 +24,43 @@
 {% block navbar %}{% endblock navbar %}
 <nav class="footer navbar navbar-light bg-light fixed-bottom">
   <div class="container">
-    <div class="row justify-content-between mt-4 mx-2 row-cols-4 g-5">
+    <div class="row justify-content-between mt-4 mx-2 row-cols-5 g-5">
       <div class="col-2">
         <h5>Каталог</h5>
         <ul class="navbar-nav">
-          <li class="nav-item"><a class="a nav-link" href="#">Смартфоны</a></li>
-          <li class="nav-item"><a class="a nav-link" href="#">Телефоны</a></li>
-          <li class="nav-item"><a class="a nav-link" href="#">Ноутбуки</a></li>
-          <li class="nav-item"><a class="a nav-link" href="#">Планшеты</a></li>
-          <li class="nav-item"><a class="a nav-link" href="#">Часы/Браслеты</a></li>
-          <li class="nav-item"><a class="a nav-link" href="#">Аксессуары</a></li>
+          <li class="nav-item"><a class="b nav-link" href="#">Смартфоны</a></li>
+          <li class="nav-item"><a class="b nav-link" href="#">Телефоны</a></li>
+          <li class="nav-item"><a class="b nav-link" href="#">Ноутбуки</a></li>
+          <li class="nav-item"><a class="b nav-link" href="#">Планшеты</a></li>
+          <li class="nav-item"><a class="b nav-link" href="#">Часы/Браслеты</a></li>
+          <li class="nav-item"><a class="b nav-link" href="#">Аксессуары</a></li>
         <ul>
       </div>
       <div class="col-2">
         <h5>О компании</h5>
         <ul class="navbar-nav">
-          <li><a class="a nav-link" href="#">О нас</a></li>
+          <li><a class="b nav-link" href="#">О нас</a></li>
         </ul> 
       </div>
       <div class="col-2">
         <h5>Покупателям</h5>
         <ul class="navbar-nav">
-          <li><a class="a nav-link" href="#">О нас</a></li>
+          <li><a class="b nav-link" href="#">О нас</a></li>
         </ul>
       </div>
-      <div class="col-5">
+      <div class="col-2"></div>
+      <div class="col-4">
         <h6>Подписаться на рассылку:</h6>
         <form class="d-flex align-items-center ">
-          <input  class="form-control" type="email" placeholder="email" aria-label="email">
-          <button id="button" class="btn btn-outline-success" type="submit">отправить</button>
+          <input class="form-control email-send" type="email" placeholder="email" aria-label="email">
+          <button class="btn btn-outline-success button-send" type="submit">отправить</button>
         </form>
         <div class="row justify-content-between mt-4 row-cols-2 g-1">
           <div class="col">
             <h6>Адрес:</h6>
             <ul class="navbar-nav">
-              <li>г.Москва ул.Калинина д.23а</li>
+              <li>г.Москва</li>
+              <li>ул.Калинина д.23а</li>
             </ul>
           </div>
           <div class="col-4">
