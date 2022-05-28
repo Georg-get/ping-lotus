@@ -13,7 +13,6 @@ deploy:
     #- docker-compose stop  Django|| true #&& docker-compose rm ${CI_REGISTRY_IMAGE} || true
     - docker-compose up -d --force-recreate
   only:
-    - master  # за комитить
-    # новый релизный тег 
+    - tags
   tags:
     - shell

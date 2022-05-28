@@ -1,0 +1,55 @@
+{
+  "name": "docker-slack-notify",
+  "version": "0.0.0-semantic-release",
+  "description": "A lightweight Docker image to easily publish Slack message",
+  "engines": {
+    "node": ">=12.0",
+    "yarn": ">=1.17"
+  },
+  "devDependencies": {
+    "@semantic-release/exec": "^6.0.2",
+    "@semantic-release/gitlab": "^7.0.4",
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "^3.3.0",
+    "semantic-release": "^18.0.1"
+  },
+  "scripts": {
+    "commit": "git-cz"
+  },
+  "release": {
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      [
+        "@semantic-release/exec",
+        {
+          "prepareCmd": "make set-version version=${nextRelease.version}"
+        }
+      ],
+      [
+        "@semantic-release/gitlab",
+        {
+          "assets": [
+            {
+              "path": "files/*.sh"
+            }
+          ]
+        }
+      ]
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ttps://gitlab.com/Georg-get/ping-lotus.git"
+  },
+  "author": "FX Soubirou",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://gitlab.com/Georg-get/ping-lotus/-/issues"
+  },
+  "homepage": "https://gitlab.com/Georg-get/ping-lotus"

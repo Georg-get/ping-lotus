@@ -10,5 +10,4 @@ build release image:
     - docker push ${CI_REGISTRY_IMAGE}:latest
 
   only:
-    - master # за комитить
-  # новый релизный тег 
+    - tags
