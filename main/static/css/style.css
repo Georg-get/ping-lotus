@@ -1,26 +1,31 @@
 /*----------------------------------Общее------------------------------------------------------------------------------------------*/
 /*----------Тело страници----------*/
-body                                { font-family:'Montserrat', sans-serif; font-weight:400; background-color:#ffffff;
+body                                { font-family:'Montserrat', sans-serif; font-weight:400; background-color:#1b1f22;
                                       overflow:auto;   }
 a                                   { text-decoration:none;   }
 
 .flex                               { display: flex; }
 /*=================================*/ 
 /*----------Кнопки\Меню------------*/
+.btn                                { border-radius: 0; }
+.btn:hover                          { color: #dd3290; background-color: #403d36; border-color: #403d36; }
+.btn:active                         { color: #fff; background-color: #dd3290; border-color: #dd3290;}
+.btn:focus                          { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
+.btn:focus:active                   { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
 .btn-outline-success                { color: #798389;}
-.btn-outline-success:hover          { color: #dd3290; background-color: #f8f9fa; border-color: #f8f9fa; }
-.btn-outline-success:active         { color: #fff; background-color: #dd3290; }
+.btn-outline-success:hover          { color: #dd3290; background-color: #403d36; border-color: #403d36; }
+.btn-outline-success:active         { color: #fff; background-color: #dd3290; border-color: #dd3290;  }
 .btn-outline-success:focus          { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
 .btn-outline-success:focus:active   { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
 .form-control:focus                 { box-shadow: 0 0 0 0; }
 .dropdown-menu                      { border-radius: 0;}
 .dropdown-item:focus,
-.dropdown-item:hover                { background-color: #fff9c1;}
+.dropdown-item:hover                { background-color: #403d36;}
 .dropdown-item:active               { background-color: #dd3290;}
-.nav-link                           { position: relative; border-width: 1px; border-left-style: solid; border-color: #e0e0e0; }
+.nav-link                           { position: relative; border-width: 1px; border-left-style: solid; border-color: #403d36; }
 .navbar-expand-lg .btn-nav.nav-link { display: flex; align-items: center; align-content: center; flex-direction: row; flex-wrap: nowrap; 
                                       padding: 1rem 0.5rem 1rem 1rem;}
-.nav-link:hover                     { background-color: #e0e0e0; }
+.nav-link:hover                     { background-color: #403d36; }
 .nav-link::after                    { content: ""; position: absolute; bottom: 0; left: 50%; width: 0%; height: 5%;
                                       background-color: #dd3290;transition: all 0.2s ease-in-out; }
 .nav-link:hover::after              { width: 100%; left: 0%; }
@@ -31,13 +36,15 @@ a                                   { text-decoration:none;   }
 .navbar-toggler:focus               { box-shadow: 0 0 0 0; }
 .card +
 .modal-dialog .card img             { height: 8rem; }
-.footer                             { display: unset; background: linear-gradient(to top, #df6baa, #ffffff);}
+.footer                             { display: unset; background: linear-gradient(to top, #dd3290b3 95%, #1b1f22);}
 .footer .container                  { display: unset; }
 
 /*----------Модальные окна---------*/
 .offcanvas-start                    { top: 55px; }
 .offcanvas-backdrop                 { top: 0px;  }
 
+.modal-header                       { border-color: #403d36; }
+.modal-footer                       { border-color: #403d36; }
 .modal.fade .modal-dialog           { transform: translate(-100px,0); }
 .modal.show.fade .modal-dialog      { transform: translate(0px,0); }
 .modal-fullscreen                   { width: 65vw;  }
@@ -57,14 +64,14 @@ a                                   { text-decoration:none;   }
 /*=================================*/
 /*----------Нижний бар-------------*/
 #nav                                { display: flex; flex-direction: column; margin: 0px; padding-top: 0px;
-                                      border-width: 1px; border-bottom-style: solid ; border-color: #e2e2e2; }
+                                      border-width: 1px; border-bottom-style: solid ; border-color: #403d36; }
 #logo                               { float:left; display:flex; align-items:center; height:60px; margin:4px auto 4px;  }
-#bottom-nav                         { padding: 0 0 0 0; border-width: 1px; border-top-style: solid; border-color: #e0e0e0; }
+#bottom-nav                         { padding: 0 0 0 0; border-width: 1px; border-top-style: solid; border-color: #403d36; }
 #button-search                      { padding-left: 0.75rem; border-radius: 0; border: 0; border-width: 1px; border-bottom-style: solid; 
-                                      border-color: #e0e0e0; }
-#search                             { width: 30rem; background-color: #f8f9fa; border-radius: 0; border: 0; border-width: 1px; border-bottom-style: solid;
-                                      border-color: #e0e0e0; }
-#catalog                            { padding: 0.6rem 1rem 0.6rem 1rem; border-width: 1px; border-right-style: solid; border-color: #e0e0e0;  }
+                                      border-color: #403d36; }
+#search                             { width: 30rem; background-color: #212529; border-radius: 0; border: 0; border-width: 1px; border-bottom-style: solid;
+                                      border-color: #403d36; }
+#catalog                            { padding: 0.6rem 1rem 0.6rem 1rem; border-width: 1px; border-right-style: solid;  }
 #nav-logo                           { padding: 0 1.5rem 0 1.5rem; }
 #offcanvas-body                     { display: contents; } 
 #button-search .bi.bi-search        { font-size: unset; }
@@ -76,6 +83,9 @@ a                                   { text-decoration:none;   }
 .b.nav-link                         { padding: 0rem 0.1rem 0.1rem 0.1rem; border-width: 0; border-left-style: none }
 .button-send                        { border-radius: 0; border-color: #e2e2e2; background-color: #fff; border-left-width: 0px; }
 .email-send                         { border-radius: 0; border-color: #e2e2e2; }
+.footer .col-2                      { width: 11.5%; }
+.footer h5                          { color: #1b1f22; }
+.footer h6                          { color: #1b1f22; }
 /*=================================================================================================================================*/
 /*--------------------------Breakpoints--------------------------------------------------------------------------------------------*/
 @media (max-width: 1400px) {
