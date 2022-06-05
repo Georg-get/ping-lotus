@@ -22,10 +22,12 @@ a                                   { text-decoration:none;   }
 .dropdown-item:focus,
 .dropdown-item:hover                { background-color: #403d36;}
 .dropdown-item:active               { background-color: #dd3290;}
-.nav-link                           { position: relative; border-width: 1px; border-left-style: solid; border-color: #403d36; }
+.nav-link                           { position: relative; border-width: 1px; border-left-style: solid; 
+                                      border-color: #403d36; color: rgba(255, 255, 255, 0.5); }
 .navbar-expand-lg .btn-nav.nav-link { display: flex; align-items: center; align-content: center; flex-direction: row; flex-wrap: nowrap; 
                                       padding: 1rem 0.5rem 1rem 1rem;}
-.nav-link:hover                     { background-color: #dd329080; }
+.nav-link:hover                     { color: #ffffffbf; background-color: #dd329080; }
+.nav-link:focus                     { color: #ffffffbf; }
 .nav-link::after                    { content: ""; position: absolute; bottom: 0; left: 50%; width: 0%; height: 5%;
                                       background-color: #dd3290;transition: all 0.2s ease-in-out; }
 .nav-link:hover::after              { width: 100%; left: 0%; }
