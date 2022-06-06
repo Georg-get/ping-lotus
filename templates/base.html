@@ -22,6 +22,59 @@
 
 <body class="common-home">
 {% block navbar %}{% endblock navbar %}
+<div id="body-home" class="container justify-content-center align-items-center p-0">
+  <div class="row row-cols-1 p-0 ">
+    <div class="col-12 p-0">
+      {% include 'include/_carousel-1.html' %}
+    </div>
+    <div id="service-wrapper" class="row align-items-center justify-content-between row-cols-2 row-cols-lx-4 py-4 mx-0 gx-5 gy-2">
+      <div class="col-auto">
+        <div class="row align-items-center row-cols-2 g-1">
+          <div class="col-auto">
+            <i class="bi bi-box-seam"></i>
+          </div>
+          <div class="col-auto">
+            <p class="fw-bold">Быстрая доставка</p>
+            <p class="text">Доставим на следующий день!</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-auto">
+        <div class="row align-items-center row-cols-2 g-1">
+          <div class="col-auto">
+            <i class="bi bi-chat-left-dots"></i>
+          </div>
+          <div class="col-auto">
+            <p class="fw-bold">Онлайн поддержка</p>
+            <p class="text">Время работы: 9:00 - 21:00</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-auto">
+        <div class="row align-items-center row-cols-2 g-1">
+          <div class="col-auto">
+            <i class="bi bi-gem"></i>
+          </div>
+          <div class="col-auto">
+            <p class="fw-bold">Гарантия 3 года (1+2)</p>
+            <p class="text">Даём гарантию от нас на 2 года</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-auto">
+        <div class="row align-items-center row-cols-2 g-1">
+          <div class="col-auto">
+            <i class="bi bi-gift"></i>
+          </div>
+          <div class="col-auto">
+            <p class="fw-bold">Постоянные скидки</p>
+            <p class="text">Они уже действуют</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 {% include 'include/_footer.html' %}
 {% include 'include/_categories.html' %}
 </body>

@@ -3,7 +3,7 @@
 body                                { font-family:'Montserrat', sans-serif; font-weight:400; background-color:#1b1f22;
                                       overflow:auto;   }
 a                                   { text-decoration:none;   }
-
+p                                   { color: rgba(255, 255, 255, 0.5); margin: 0; }
 .flex                               { display: flex; }
 /*=================================*/ 
 /*----------Кнопки\Меню------------*/
@@ -38,10 +38,7 @@ a                                   { text-decoration:none;   }
 .navbar-toggler:focus               { box-shadow: 0 0 0 0; }
 .card +
 .modal-dialog .card img             { height: 8rem; }
-.footer                             { display: unset; }
-.footer .container                  { display: unset; }
-.footer #top-col                    { background-color: #dd3290; }
-
+.b.nav-link                         { padding: 0rem 0.1rem 0.1rem 0.1rem; border-width: 0; border-left-style: none }
 /*----------Модальные окна---------*/
 .offcanvas-start                    { top: 55px; }
 .offcanvas-backdrop                 { top: 0px;  }
@@ -83,19 +80,30 @@ a                                   { text-decoration:none;   }
 #authentication                     { padding: 1rem 1rem 1rem 0.5rem; }
 #v2-search                          { display: none; }
 /*=================================*/
-.b.nav-link                         { padding: 0rem 0.1rem 0.1rem 0.1rem; border-width: 0; border-left-style: none }
-.button-send                        { border-radius: 0; border-color: #212529; background-color: #212529; border-left-width: 0px; }
-.email-send                         { border-radius: 0; border-color: #e2e2e2; }
+/*=================================================================================================================================*/
+/*----------------------------------Подвал-----------------------------------------------------------------------------------------*/
+.footer                             { display: unset; }
+.footer .container                  { display: unset; }
+.footer #top-col                    { background-color: #dd3290; }
 .footer                             { position: relative; }
 .footer .col-2                      { width: 11.5%; }
 .footer h5                          { border-width:2px; border-bottom-style: solid; border-color: #dd3290; padding-bottom: 0.5rem; margin-bottom: 0.5rem; }
 .footer .bi-telephone-fill          { border-width:2px; border-style: solid; border-radius: 50%; border-color: #dd3290; padding: 0.5rem 0.5rem 0.313rem 0.5rem; }
 .i-social                           { color: #dd3290; }
 .i-social:hover                     { color: #dd329080; }
+.footer .bi-envelope-open           { color: #212529; }
+.button-send                        { border-radius: 0; border-color: #212529; background-color: #212529; border-left-width: 0px; }
+.email-send                         { border-radius: 0; border-color: #e2e2e2; }
 /*=================================================================================================================================*/
+#service-wrapper                    { background-color: #212529; }
+#service-wrapper i                  { font-size: 2rem; color: #212529; background-color: #dd3290; padding: 5px 10px 6px 10px; margin-right: 1rem;}
+#service-wrapper .text              { font-size: 0.8rem; }
+#service-wrapper .col-2             { padding: 0; }
 /*--------------------------Breakpoints--------------------------------------------------------------------------------------------*/
 @media (max-width: 1400px) {
-    #search                 { width: 20rem;}S
+    #service-wrapper i      { font-size: 1.5rem;}
+    #service-wrapper .text  { font-size: 0.7rem; }
+    #search                 { width: 20rem;}
     body                    { font-size:smaller; }
     .r.bi                   { font-size: large; }
     .l.bi                   { font-size: large; }
@@ -107,18 +115,19 @@ a                                   { text-decoration:none;   }
     #logo                   { height:60px; height:40px;  }
 }
 @media (max-width: 1200px) {
-    .nav-link               { font-size: 0; }
-    .a.nav-link             { font-size:small; padding: 0.2rem 0.5rem 0.2rem 0.5rem; }
-    .b.nav-link             { font-size:small; }
-    .r.bi                   { padding-left: 0rem; font-size: x-large; }
-    .l.bi                   { padding-right: 0rem; font-size: x-large; }
-    #catalog .bi.bi-list    { font-size: x-large; }
+    
+    .nav-link                   { font-size: 0; }
+    .a.nav-link                 { font-size:small; padding: 0.2rem 0.5rem 0.2rem 0.5rem; }
+    .b.nav-link                 { font-size:small; }
+    .r.bi                       { padding-left: 0rem; font-size: x-large; }
+    .l.bi                       { padding-right: 0rem; font-size: x-large; }
+    #catalog .bi.bi-list        { font-size: x-large; }
     #catalog,
     .navbar-expand-lg 
     .btn-nav.nav-link,       
-    #authentication         { padding: 0.5rem 1rem 0.5rem 1rem; }
-    .card                   { height: 6.5rem; }
-    .modal-dialog .card img { height: 6.4rem; }
+    #authentication             { padding: 0.5rem 1rem 0.5rem 1rem; }
+    .card                       { height: 6.5rem; }
+    .modal-dialog .card img     { height: 6.4rem; }
 }
 @media (max-width: 992px) {/*---Breakpoint:Смартфон---*/
     .modal-fullscreen       { width: 100vw; }
