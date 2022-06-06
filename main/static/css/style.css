@@ -130,6 +130,9 @@ p                                   { color: rgba(255, 255, 255, 0.5); margin: 0
     .modal-dialog .card img     { height: 6.4rem; }
 }
 @media (max-width: 992px) {/*---Breakpoint:Смартфон---*/
+    #service-wrapper        { justify-content: space-evenly!important }
+
+    #service-wrapper .b     { padding-left: 21px;  padding-right: 30px;}
     .modal-fullscreen       { width: 100vw; }
     .offcanvas-start        { top: 55px; }
     .offcanvas-backdrop     { top: 55px; }
@@ -153,6 +156,10 @@ p                                   { color: rgba(255, 255, 255, 0.5); margin: 0
     .card                   { height: 8rem; }
     .modal-dialog .card img { height: 7.9rem; }
     #navbarSupportedContent.animation.dropdown-menu.show {visibility: visible;}
+}
+@media (max-width: 767px) {
+    #service-wrapper        { justify-content: space-between!important }
+    #service-wrapper .b     { padding-left: 24px;  padding-right: 24px;}
 }
 @media (max-width: 576px) {
     #v2-search              { display: none; }
