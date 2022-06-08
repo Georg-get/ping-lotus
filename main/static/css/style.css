@@ -99,6 +99,7 @@ p                                   { color: rgba(255, 255, 255, 0.5); margin: 0
 #service-wrapper i                  { font-size: 2rem; color: #212529; background-color: #dd3290; padding: 5px 10px 6px 10px; margin-right: 1rem;}
 #service-wrapper .text              { font-size: 0.8rem; }
 #service-wrapper .col-2             { padding: 0; }
+#banner .card                       { height: 100%; }
 /*--------------------------Breakpoints--------------------------------------------------------------------------------------------*/
 @media (max-width: 1400px) {
     #service-wrapper i      { font-size: 1.5rem;}
