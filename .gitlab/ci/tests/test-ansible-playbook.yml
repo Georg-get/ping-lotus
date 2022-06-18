@@ -7,3 +7,5 @@ test ansible playbook:
     - ansible-playbook $ANSIBLE_PLABOOK
   tags:
     - docker
+  except:
+    - master
