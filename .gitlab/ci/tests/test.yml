@@ -7,3 +7,5 @@ test:
     - "python manage.py test --noinput"
   tags:
     - docker
+  except:
+    - master

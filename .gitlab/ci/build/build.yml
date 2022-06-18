@@ -8,3 +8,5 @@ build:
     - docker build -f $NAME_DOCKERFILE_BUILD .
   tags:
     - docker
+  except:
+    - master
