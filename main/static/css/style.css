@@ -99,7 +99,13 @@ p                                   { color: rgba(255, 255, 255, 0.5); margin: 0
 #service-wrapper i                  { font-size: 2rem; color: #212529; background-color: #dd3290; padding: 5px 10px 6px 10px; margin-right: 1rem;}
 #service-wrapper .text              { font-size: 0.8rem; }
 #service-wrapper .col-2             { padding: 0; }
-#banner .card                       { height: 100%; }
+#banner .card                       { height: 100%; overflow: hidden; position: relative; }
+#banner .card img                   { transition:all 1s ease 0s ; }
+#banner .card:hover img             { transform:scale(1.1) rotateZ(-1.5deg); }
+#banner .card:hover:before          { transform:scale3d(1.9, 1.9, 1) rotate3d(0, 0, 1, -45deg) translate3d(0, 115%, 0); }
+#banner .card:before                { position:absolute;top:0;left:0;bottom:0;right:0;background:#dd32905d;;content:'';transition:transform 0.9s;transform:scale3d(1.9, 1.9, 1) rotate3d(0, 0, 1, -45deg) translate3d(0, -115%, 0);z-index:3; }
+#banner .card-title, 
+#banner .card-text                  { color: #909294; }
 /*--------------------------Breakpoints--------------------------------------------------------------------------------------------*/
 @media (max-width: 1400px) {
     #service-wrapper i      { font-size: 1.5rem;}
