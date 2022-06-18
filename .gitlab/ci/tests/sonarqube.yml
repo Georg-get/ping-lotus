@@ -14,6 +14,7 @@ sonarqube:
   script: 
     - sonar-scanner
   allow_failure: true
-
+  tags:
+    - shell
   only:
     - master
