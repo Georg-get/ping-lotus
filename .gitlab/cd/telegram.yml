@@ -13,3 +13,5 @@ notify_error:
   when: on_failure
   only:
     - master
+  tags:
+    - shell

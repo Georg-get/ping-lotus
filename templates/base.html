@@ -19,14 +19,150 @@
     crossorigin="anonymous"></script>
 
 </head>
-
+<style>
+  #banner .card { background: url("{% static '/img/textura-gex.png' %}"); }
+</style>
 <body class="common-home">
 {% block navbar %}{% endblock navbar %}
-<nav class="footer navbar navbar-light bg-light fixed-bottom">
-  <div class="container">
-    <a class="navbar-brand" href="#">Default</a>
+<div id="body-home" class="container justify-content-center align-items-center p-0">
+  <div class="row row-cols-1 p-0 ">
+    <div class="col-12 p-0">
+      {% include 'include/_carousel-1.html' %}
+    </div>
+    <div id="service-wrapper" class="row align-items-center justify-content-between row-cols-2 row-cols-lx-4 py-4 mx-0 gx-5 gy-2">
+      <div class="col-auto">
+        <div class="row align-items-center row-cols-2 g-1">
+          <div class="col-auto">
+            <i class="bi bi-box-seam"></i>
+          </div>
+          <div class="col-auto">
+            <p class="fw-bold">Быстрая доставка</p>
+            <p class="text">Доставим на следующий день!</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-auto">
+        <div class="row align-items-center row-cols-2 g-1">
+          <div class="col-auto">
+            <i class="bi bi-chat-left-dots"></i>
+          </div>
+          <div class="col-auto">
+            <p class="fw-bold">Онлайн поддержка</p>
+            <p class="text">Время работы: 9:00 - 21:00</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-auto a">
+        <div class="row align-items-center row-cols-2 g-1">
+          <div class="col-auto">
+            <i class="bi bi-gem"></i>
+          </div>
+          <div class="col-auto">
+            <p class="fw-bold">Гарантия 3 года (1+2)</p>
+            <p class="text">Даём гарантию от нас на 2 года</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-auto b">
+        <div class="row align-items-center row-cols-2 g-1">
+          <div class="col-auto">
+            <i class="bi bi-gift"></i>
+          </div>
+          <div class="col-auto">
+            <p class="fw-bold">Постоянные скидки</p>
+            <p class="text">Они уже действуют</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- baner 3 col -->
+    <div id="banner" class="container px-0 py-2 pt-3">
+      <div class="row align-items-end justify-content-between gy-2">
+        <div class="col-md">
+          <div class="card" href="#">
+            <img src="{% static '/img/banner-micro1.png' %}" class="card-img-top" alt="...">
+            <div class="card-img-overlay"></div>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="card" href="#">
+            <img src="{% static '/img/banner-micro2.png' %}" class="card-img-top" alt="...">
+            <div class="card-img-overlay"></div>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="card" href="#">
+            <img src="{% static '/img/banner-micro3.png' %}" class="card-img-top" alt="...">
+            <div class="card-img-overlay"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- baner 2 col -->
+    <div id="banner" class="container px-0 py-2">
+      <div class="row align-items-center justify-content-between gy-2">
+        <div class="col-md">
+          <div class="card" href="#">
+            <img src="{% static '/img/banner-micro1.png' %}" class="card-img-top" alt="...">
+            <div class="card-img-overlay"></div>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="card" href="#">
+            <img src="{% static '/img/banner-micro1.png' %}" class="card-img-top" alt="...">
+            <div class="card-img-overlay"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- baner grid -->
+    <div id="banner" class="container px-0 py-2">
+      <div class="row align-items-center justify-content-between gy-2">
+        <div class="col-md">
+          <div class="card" href="#">
+            <img src="{% static '/img/banner-micro1.png' %}" class="card-img-top" alt="...">
+            <div class="card-img-overlay"></div>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="container px-0">
+            <div class="row row-cols-1 align-items-center justify-content-between gy-2">
+              <div class="col-md-auto">
+                <div class="card" href="#">
+                  <img src="{% static '/img/banner-micro1.png' %}" class="card-img-top" alt="...">
+                  <div class="card-img-overlay"></div>
+                </div>
+              </div>
+              <div class="col-md-auto">
+                <div class="card" href="#">
+                  <img src="{% static '/img/banner-micro1.png' %}" class="card-img-top" alt="...">
+                  <div class="card-img-overlay"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="card" href="#">
+            <img src="{% static '/img/banner-micro1.png' %}" class="card-img-top" alt="...">
+            <div class="card-img-overlay"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="banner" class="container px-0 py-2">
+      <div class="row align-items-center justify-content-between gy-2">
+        <div class="col-md">
+          <div class="card" href="#">
+            <img src="{% static '/img/banner-mini1.jpg' %}" class="card-img-top" alt="...">
+            <div class="card-img-overlay"></div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-</nav>
+</div>
+{% include 'include/_footer.html' %}
 {% include 'include/_categories.html' %}
 </body>
 </html> 
