@@ -6,4 +6,6 @@ test ansible playbook:
     - apt update && apt install ansible -y
     - ansible-playbook $ANSIBLE_PLABOOK
   tags:
-    - shell
+    - docker
+  except:
+    - master
