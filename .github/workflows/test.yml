@@ -19,4 +19,3 @@ jobs:
       run: |
         pip install -r requirements.txt
         python3 manage.py test --noinput
-        python3 manage.py runserver
