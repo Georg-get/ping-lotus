@@ -18,4 +18,4 @@ jobs:
     - name: install requirements and start test
       run: |
         pip install -r requirements.txt
-        python3 manage.py runserver --noinput
+        python3 manage.py runserver
