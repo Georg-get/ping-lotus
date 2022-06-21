@@ -22,7 +22,7 @@
 <style>
   #banner .card { background: url("{% static '/img/textura-gex.png' %}"); }
 </style>
-<body class="common-home">
+<body class="common-home" >
 {% block navbar %}{% endblock navbar %}
 <div id="body-home" class="container justify-content-center align-items-center p-0">
   <div class="row row-cols-1 p-0 ">
@@ -78,18 +78,18 @@
     <!-- baner 3 col -->
     <div id="banner" class="container px-0 py-2 pt-3">
       <div class="row align-items-end justify-content-between gy-2">
-        <div class="col-6 col-lg">
+        <div class="col-12 col-lg">
           <div class="card" href="#">
-            <img src="{% static '/img/banner-micro1.png' %}" class="card-img-top" alt="...">
+            <img src="{% static '/img/banner-micro1.png' %}" class="card-img-top banner-micro1" alt="...">
             <div class="card-img-overlay">
               <p class="card-title fw-bold fs-3">iPhone</p>
               <p class="card-text fs-4">Cамые лучшие предложения</p>
             </div>
           </div>
         </div>
-        <div class="col-6 col-lg">
+        <div class="col-12 col-lg">
           <div class="card" href="#">
-            <img src="{% static '/img/banner-micro2.png' %}" class="card-img-top" alt="...">
+            <img src="{% static '/img/banner-micro2.png' %}" class="card-img-top banner-micro2" alt="...">
             <div class="card-img-overlay">
               <p class="card-title fw-bold fs-3">Xiaomi</p>
               <p class="card-text text-wrap fs-4">Теперь по самым доступным ценам</p>
@@ -98,7 +98,7 @@
         </div>
         <div class="col-12  col-lg">
           <div class="card" href="#">
-            <img src="{% static '/img/banner-micro3.png' %}" class="card-img-top" alt="...">
+            <img src="{% static '/img/banner-micro3.png' %}" class="card-img-top banner-micro3" alt="...">
             <div class="card-img-overlay">
               <p class="card-title fw-bold fs-3">OnePlus</p>
               <p class="card-text fs-4">Новые модели уже в продаже</p>
@@ -115,7 +115,7 @@
             <img src="{% static '/img/banner-mini2.png' %}" class="card-img img-conf-1" alt="...">
             <div class="card-img-overlay">
               <p class="card-title a fw-bold fs-3">ПОДАРОЧНЫЕ КАРТЫ</p>
-              <p class="card-text a fw-bold fs-4">ДОСТАВЬТЕ ДОРОГОМУ ЧЕЛОВЕКУ УДОВОЛЬСТВИЕ ВЫБРАТЬ ПОДАРОК, КОТОРЫЙ ЕМУ ТОЧНО ПОНРАВИТСЯ!</p>
+              <p class="card-text a fw-bold fs-5">ДОСТАВЬТЕ ДОРОГОМУ ЧЕЛОВЕКУ УДОВОЛЬСТВИЕ ВЫБРАТЬ ПОДАРОК, КОТОРЫЙ ЕМУ ТОЧНО ПОНРАВИТСЯ!</p>
             </div>
           </div>
         </div>
@@ -124,7 +124,7 @@
             <img src="{% static '/img/banner-mini3.png' %}" class="card-img img-conf-2" alt="...">
             <div class="card-img-overlay">
               <p class="card-title a fw-bold fs-3">ДОПОЛНИТЕЛЬНАЯ БЕСПЛАТНАЯ ГАРАНТИЯ</p>
-              <p class="card-text a fw-bold fs-5">ДОПОЛНИТЕЛЬНАЯ ГАРАНТИЯ – ПРЕДСТАВЛЯЕТ СОБОЙ БЕСПЛАТНОЕ
+              <p class="card-text a fw-bold fs-6">ДОПОЛНИТЕЛЬНАЯ ГАРАНТИЯ – ПРЕДСТАВЛЯЕТ СОБОЙ БЕСПЛАТНОЕ
                                                   СЕРВИСНОЕ ОБСЛУЖИВАНИЕ ПРИОБРЕТЕННЫХ У НАС ТОВАРОВ НА 2 ГОДА, ДЕЙСТВУЮЩАЯ ПО ОКОНЧАНИИ ОСНОВНОЙ ГОДОВОЙ ГАРАНТИИ.</p>
             </div>
           </div>
@@ -171,7 +171,10 @@
         <div class="col-md">
           <div class="card" href="#">
             <img src="{% static '/img/banner-mini1.jpg' %}" class="card-img-top" alt="...">
-            <div class="card-img-overlay"></div>
+            <div class="card-img-overlay">
+              <p class="card-title b fs-6">Новинка от Xiaomi, Apple, Google...</p>
+              <p class="card-text b fw-bold fs-3">Автоматизация всего дома с помощью современных гаджетов</p>
+            </div>
           </div>
         </div>
       </div>

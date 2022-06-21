@@ -5,6 +5,9 @@ body                                { font-family:'Montserrat', sans-serif; font
 a                                   { text-decoration:none; }
 p                                   { color: rgba(255, 255, 255, 0.5); margin: 0; }
 .flex                               { display: flex; }
+body::-webkit-scrollbar             { width: 5px; height: 5px; }
+body::-webkit-scrollbar-track       { background: #212529; }
+body::-webkit-scrollbar-thumb       { background-color: #dd3290; border-radius: 20px; border: 3px solid #dd3290; }
 /*=================================*/ 
 /*----------Кнопки\Меню------------*/
 label                               { color: rgba(255, 255, 255, 0.5); }
@@ -105,11 +108,14 @@ label                               { color: rgba(255, 255, 255, 0.5); }
 #banner .card img                   { transition:all 1s ease 0s ; }
 #banner .card:hover img             { transform:scale(1.1) rotateZ(-1.5deg); }
 #banner .card:hover:before          { transform:scale3d(1.9, 1.9, 1) rotate3d(0, 0, 1, -45deg) translate3d(0, 115%, 0); }
-#banner .card:before                { position:absolute;top:0;left:0;bottom:0;right:0;background:#dd32905d;;content:'';transition:transform 0.9s;transform:scale3d(1.9, 1.9, 1) rotate3d(0, 0, 1, -45deg) translate3d(0, -115%, 0);z-index:3; }
+#banner .card:before                { position:absolute; top:-100px;left:0; bottom:-100px; right:0; background:#dd32905d;content:'';
+                                      transition:transform 0.9s; transform:scale3d(1.9, 1.9, 1) rotate3d(0, 0, 1, -45deg) translate3d(0, -115%, 0); z-index:3; }
 #banner .card-title, 
 #banner .card-text                  { color: #abadaf; width: 14.5rem; text-shadow: 2px 2px 2px black; }
 #banner .card-title.a               { color: #dd3290; width: 30rem; text-shadow: 2px 2px 2px black; }
 #banner .card-text.a                { color: #abadaf; width: 30rem; text-shadow: 2px 2px 2px black; }
+#banner .card-title.b,               
+#banner .card-text.b                { margin: 0 0 0 15rem; width: 40rem }
 #banner .img-conf-1                 { width: 330px; height: 207px; margin: 4rem 2rem 4rem auto;}
 #banner .img-conf-2                 { width: 200px; height: 200px; margin: 4rem 2rem 4rem auto;}
 
@@ -182,6 +188,11 @@ label                               { color: rgba(255, 255, 255, 0.5); }
     .card                   { height: 8rem; }
     .modal-dialog .card img { height: 7.9rem; }
     #navbarSupportedContent.animation.dropdown-menu.show {visibility: visible;}
+    #banner .card-title.b,
+    #banner .card-text.b        { margin: 0 0 0 8rem;}
+    #banner .banner-micro1  { width: 390px; height: 180px;  margin-left: auto;}
+    #banner .banner-micro2  { width: 390px; height: 180px;  margin-left: auto;}
+    #banner .banner-micro3  { width: 390px; height: 180px;  margin-left: auto;}
     #banner .banner-micro4  { width: 365px; height: 400px; }
     #banner .banner-micro5  { width: 350px; height: 195px; }
     #banner .banner-micro6  { width: 350px; height: 195px; }
@@ -190,6 +201,8 @@ label                               { color: rgba(255, 255, 255, 0.5); }
 @media (max-width: 767px) {
     #service-wrapper        { justify-content: space-between!important }
     #service-wrapper .b     { padding-left: 24px;  padding-right: 24px;}
+    #banner .card-title.b,               
+    #banner .card-text.b        { margin: 0 0 0 6rem; width: 20rem }
     #banner .banner-micro4      { width: 250px; height: 360px; }
     #banner .banner-micro5      { width: 285px; height: 175px; }
     #banner .banner-micro6      { width: 285px; height: 175px; }
@@ -199,10 +212,13 @@ label                               { color: rgba(255, 255, 255, 0.5); }
     #v2-search              { display: none; }
     .card                   { height: 8rem; }
     .modal-dialog .card img { height: 7.9rem; }
+    #banner .card-text.a        { color: #3e8fe1; width: 26rem; text-shadow: 2px 2px 2px black; }
+    #banner .card-text.b        { font-size: 2rem!important; }
     #banner .banner-micro4      { width: 425px; height: 610px; }
     #banner .banner-micro5      { width: 425px; height: 265px; }
     #banner .banner-micro6      { width: 425px; height: 265px; }
     #banner .banner-micro7      { width: 425px; height: 265px; }
+
 }
 /*===================================================*/
 /*=================================================================================================================================*/
