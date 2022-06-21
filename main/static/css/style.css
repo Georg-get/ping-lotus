@@ -2,11 +2,12 @@
 /*----------Тело страници----------*/
 body                                { font-family:'Montserrat', sans-serif; font-weight:400; background-color:#1b1f22;
                                       overflow:auto;   }
-a                                   { text-decoration:none;   }
+a                                   { text-decoration:none; }
 p                                   { color: rgba(255, 255, 255, 0.5); margin: 0; }
 .flex                               { display: flex; }
 /*=================================*/ 
 /*----------Кнопки\Меню------------*/
+label                               { color: rgba(255, 255, 255, 0.5); }
 .btn                                { border-radius: 0; }
 .btn:hover                          { color: #dd3290; background-color: #212529; border-color: #212529; }
 .btn:active                         { color: #fff; background-color: #dd3290; border-color: #dd3290;}
@@ -19,8 +20,9 @@ p                                   { color: rgba(255, 255, 255, 0.5); margin: 0
 .btn-outline-success:focus:active   { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
 .form-control:focus                 { box-shadow: 0 0 0 0; }
 .dropdown-menu                      { border-radius: 0;}
+.dropdown-item                      { color: rgba(255, 255, 255, 0.5); }
 .dropdown-item:focus,
-.dropdown-item:hover                { background-color: #403d36;}
+.dropdown-item:hover                { background-color: #dd3290;}
 .dropdown-item:active               { background-color: #dd3290;}
 .nav-link                           { position: relative; border-width: 1px; border-left-style: solid; 
                                       border-color: #403d36; color: rgba(255, 255, 255, 0.5); }
@@ -105,7 +107,11 @@ p                                   { color: rgba(255, 255, 255, 0.5); margin: 0
 #banner .card:hover:before          { transform:scale3d(1.9, 1.9, 1) rotate3d(0, 0, 1, -45deg) translate3d(0, 115%, 0); }
 #banner .card:before                { position:absolute;top:0;left:0;bottom:0;right:0;background:#dd32905d;;content:'';transition:transform 0.9s;transform:scale3d(1.9, 1.9, 1) rotate3d(0, 0, 1, -45deg) translate3d(0, -115%, 0);z-index:3; }
 #banner .card-title, 
-#banner .card-text                  { color: #909294; }
+#banner .card-text                  { color: #abadaf; width: 14.5rem; text-shadow: 2px 2px 2px black; }
+#banner .card-title.a               { color: #dd3290; width: 30rem; text-shadow: 2px 2px 2px black; }
+#banner .card-text.a                { color: #abadaf; width: 30rem; text-shadow: 2px 2px 2px black; }
+#banner .img-conf-1                 { width: 330px; height: 207px; margin: 4rem 2rem 4rem auto;}
+#banner .img-conf-2                 { width: 200px; height: 200px; margin: 4rem 2rem 4rem auto;}
 /*--------------------------Breakpoints--------------------------------------------------------------------------------------------*/
 @media (max-width: 1400px) {
     #service-wrapper i      { font-size: 1.5rem;}
