@@ -112,6 +112,11 @@ label                               { color: rgba(255, 255, 255, 0.5); }
 #banner .card-text.a                { color: #abadaf; width: 30rem; text-shadow: 2px 2px 2px black; }
 #banner .img-conf-1                 { width: 330px; height: 207px; margin: 4rem 2rem 4rem auto;}
 #banner .img-conf-2                 { width: 200px; height: 200px; margin: 4rem 2rem 4rem auto;}
+
+#banner .banner-micro4              { width: 250px; height: 400px; }
+#banner .banner-micro5              { width: 300px; height: 195px; }
+#banner .banner-micro6              { width: 300px; height: 195px; }
+#banner .banner-micro7              { width: 740px; height: 400px; }
 /*--------------------------Breakpoints--------------------------------------------------------------------------------------------*/
 @media (max-width: 1400px) {
     #service-wrapper i      { font-size: 1.5rem;}
@@ -126,6 +131,10 @@ label                               { color: rgba(255, 255, 255, 0.5); }
     .btn-nav.nav-link,       
     #authentication         { padding: 0.65rem 1rem 0.65rem 1rem; }
     #logo                   { height:60px; height:40px;  }
+    #banner .banner-micro4  { width: 250px; height: 400px; }
+    #banner .banner-micro5  { width: 260px; height: 195px; }
+    #banner .banner-micro6  { width: 260px; height: 195px; }
+    #banner .banner-micro7  { width: 600px; height: 400px; }
 }
 @media (max-width: 1200px) {
     
@@ -141,6 +150,10 @@ label                               { color: rgba(255, 255, 255, 0.5); }
     #authentication             { padding: 0.5rem 1rem 0.5rem 1rem; }
     .card                       { height: 6.5rem; }
     .modal-dialog .card img     { height: 6.4rem; }
+    #banner .banner-micro4      { width: 200px; height: 300px; }
+    #banner .banner-micro5      { width: 250px; height: 145px; }
+    #banner .banner-micro6      { width: 250px; height: 145px; }
+    #banner .banner-micro7      { width: 480px; height: 300px; }
 }
 @media (max-width: 992px) {/*---Breakpoint:Смартфон---*/
     #service-wrapper        { justify-content: space-evenly!important }
@@ -169,15 +182,27 @@ label                               { color: rgba(255, 255, 255, 0.5); }
     .card                   { height: 8rem; }
     .modal-dialog .card img { height: 7.9rem; }
     #navbarSupportedContent.animation.dropdown-menu.show {visibility: visible;}
+    #banner .banner-micro4  { width: 365px; height: 400px; }
+    #banner .banner-micro5  { width: 350px; height: 195px; }
+    #banner .banner-micro6  { width: 350px; height: 195px; }
+    #banner .banner-micro7  { width: 750px; height: 400px; }
 }
 @media (max-width: 767px) {
     #service-wrapper        { justify-content: space-between!important }
     #service-wrapper .b     { padding-left: 24px;  padding-right: 24px;}
+    #banner .banner-micro4      { width: 250px; height: 360px; }
+    #banner .banner-micro5      { width: 285px; height: 175px; }
+    #banner .banner-micro6      { width: 285px; height: 175px; }
+    #banner .banner-micro7      { width: 565px; height: 335px; }
 }
 @media (max-width: 576px) {
     #v2-search              { display: none; }
     .card                   { height: 8rem; }
     .modal-dialog .card img { height: 7.9rem; }
+    #banner .banner-micro4      { width: 425px; height: 610px; }
+    #banner .banner-micro5      { width: 425px; height: 265px; }
+    #banner .banner-micro6      { width: 425px; height: 265px; }
+    #banner .banner-micro7      { width: 425px; height: 265px; }
 }
 /*===================================================*/
 /*=================================================================================================================================*/
