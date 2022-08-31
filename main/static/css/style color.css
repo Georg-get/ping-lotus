@@ -1,0 +1,57 @@
+/*----------------------------------Общее------------------------------------------------------------------------------------------*/
+/*----------Тело страници----------*/
+body                                { background-color:#1b1f22; }
+p                                   { color: rgba(255, 255, 255, 0.5); }/*----------txt body----------*/
+body::-webkit-scrollbar-track       { background: #212529; }
+body::-webkit-scrollbar-thumb       { background-color: #dd3290; border: #dd3290; }
+/*=================================*/
+/*----------Кнопки\Меню------------*/
+label                               { color: rgba(255, 255, 255, 0.5); }
+.btn:hover                          { color: #dd3290; background-color: #212529; border-color: #212529; }
+.btn:active                         { color: #fff; background-color: #dd3290; border-color: #dd3290; }
+.btn-outline-success                { color: #798389;}
+.btn-outline-success:hover          { color: #dd3290; background-color: #212529; border-color: #212529; }
+.btn-outline-success:active         { color: #fff; background-color: #dd3290; border-color: #dd3290;  }
+.dropdown-item                      { color: rgba(255, 255, 255, 0.5); }
+.dropdown-item:focus,
+.dropdown-item:hover                { background-color: #dd3290; }
+.dropdown-item:active               { background-color: #dd3290; }
+.nav-link                           { color: rgba(255, 255, 255, 0.5); border-color: #403d36;  }
+.nav-link:hover                     { color: #ffffffbf; background-color: #dd329080; }
+.nav-link:focus                     { color: #ffffffbf; }
+.nav-link::after                    { background-color: #dd3290; }
+.navbar-toggler:focus:active        { background-color: #dd3290; }
+/*=================================*/
+/*----------Модальные окна---------*/
+.modal-header                       { border-color: #403d36; }
+.modal-footer                       { border-color: #403d36; }
+/*=================================*/
+/*=================================================================================================================================*/
+/*----------------------------------Навбар-----------------------------------------------------------------------------------------*/
+/*----------Верхний бар------------*/
+#navbarSupportedContent             { background-color: rgba(0,0,0,0); }
+/*=================================*/
+/*----------Нижний бар-------------*/
+#button-search                      { border-color: #403d36; }
+#nav                                { border-color: #403d36; }
+#bottom-nav                         { border-color: #403d36; }
+#search                             { border-color: #403d36; background-color: #212529; }
+/*=================================*/
+/*=================================================================================================================================*/
+/*----------------------------------Подвал-----------------------------------------------------------------------------------------*/
+.footer #top-col                    { background-color: #dd3290; }
+.footer h5                          { border-color: #dd3290; }
+.footer .bi-telephone-fill          { border-color: #dd3290; }
+.i-social                           { color: #dd3290; }
+.i-social:hover                     { color: #dd329080; }
+.footer .bi-envelope-open           { color: #cdd1d4; }
+.button-send                        { border-color: #212529; background-color: #212529; }
+.email-send                         { border-color: #e2e2e2; }
+/*=================================================================================================================================*/
+#service-wrapper                    { background-color: #212529; }
+#service-wrapper i                  { color: #212529; background-color: #dd3290; }
+#banner .card:before                { background:#dd32905d; }
+#banner .card-title, 
+#banner .card-text                  { color: #abadaf; }
+#banner .card-title.a               { color: #dd3290; }
+#banner .card-text.a                { color: #abadaf; }
