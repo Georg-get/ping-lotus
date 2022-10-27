@@ -1,187 +1,151 @@
 <!doctype html>
 <html dir="ltr" lang="ru">
 {% load static %}
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>Главная страница</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" rel="stylesheet"
+    crossorigin="anonymous">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,900&subset=cyrillic"
-        type='text/css' rel="stylesheet">
+    type='text/css' rel="stylesheet">
   <link type="text/css" rel="stylesheet" href="{% static 'css/fontawesome.min.css' %}">
   <link media="screen" rel="stylesheet" href="{% static 'css/style.css' %}">
   <link media="screen" rel="stylesheet" href="{% static '/css/style color.css' %}">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-          integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-          crossorigin="anonymous"></script>
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
 
 </head>
 <style>
-  #banner .card { background: url("{% static '/img/textura-gex.png' %}"); }
+  /* .parallax {
+     The image used 
+    background-image: url("{% static '/img/logo.png' %}");
+
+     Full height 
+    height: 100%;
+
+     Create the parallax scrolling effect 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+  /* #banner .card { background: url("{% static '/img/textura-gex.png' %}"); } */
 </style>
-<body class="common-home" >
-{% block navbar %}{% endblock navbar %}
-<div id="body-home" class="container justify-content-center align-items-center p-0">
-  <div class="row row-cols-1 p-0 ">
-    <div class="col-12 p-0">
-      {% include 'include/_carousel-1.html' %}
-    </div>
-    <div id="service-wrapper" class="row align-items-center justify-content-between row-cols-2 row-cols-lx-4 py-4 mx-0 gx-5 gy-2">
-      <div class="col-auto">
-        <div class="row align-items-center row-cols-2 g-1">
-          <div class="col-auto">
-            <i class="bi bi-box-seam"></i>
-          </div>
-          <div class="col-auto">
-            <p class="fw-bold">Быстрая доставка</p>
-            <p class="text">Доставим на следующий день!</p>
-          </div>
+
+<body class="common-home" data-bs-spy="scroll" data-bs-target="#list-example">
+  {% block navbar %}{% endblock navbar %}
+  {% include 'include/_carousel-1.html' %}
+  <div id="card-container" class="container">
+    <div id="body-card" data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="0" class="scrollspy-example"
+      tabindex="0">
+      <div class="row d">
+        <div class="row">
+          <div class="col" id="list-item-1">Католог</div>
         </div>
-      </div>
-      <div class="col-auto">
-        <div class="row align-items-center row-cols-2 g-1">
-          <div class="col-auto">
-            <i class="bi bi-chat-left-dots"></i>
-          </div>
-          <div class="col-auto">
-            <p class="fw-bold">Онлайн поддержка</p>
-            <p class="text">Время работы: 9:00 - 21:00</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-auto a">
-        <div class="row align-items-center row-cols-2 g-1">
-          <div class="col-auto">
-            <i class="bi bi-gem"></i>
-          </div>
-          <div class="col-auto">
-            <p class="fw-bold">Гарантия 3 года (1+2)</p>
-            <p class="text">Даём гарантию от нас на 2 года</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-auto b">
-        <div class="row align-items-center row-cols-2 g-1">
-          <div class="col-auto">
-            <i class="bi bi-gift"></i>
-          </div>
-          <div class="col-auto">
-            <p class="fw-bold">Постоянные скидки</p>
-            <p class="text">Они уже действуют</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- baner 3 col -->
-    <div id="banner" class="container px-0 py-2 pt-3">
-      <div class="row align-items-end justify-content-between gy-2">
-        <div class="col-12 col-lg">
-          <div class="card" href="#">
-            <img src="{% static '/img/banner-micro1.png' %}" class="card-img-top banner-micro1" alt="...">
-            <div class="card-img-overlay">
-              <p class="card-title fw-bold fs-3">iPhone</p>
-              <p class="card-text fs-4">Cамые лучшие предложения</p>
+        <div class="col">
+          <div class="product">
+            <div class="imgbox"> {% include 'include/_carousel-card.html' %} </div>
+            <div class="specifies">
+              <h2>Analog Watch <br> <span>Rolex</span></h2>
+              <div class="price">$1500</div> <label>Size</label>
+              <ul>
+                <li>10MM</li>
+                <li>20MM</li>
+                <li>30MM</li>
+                <li>40MM</li>
+                <li>50MM</li>
+              </ul> <label>Colors</label>
+              <ul class="colors">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul> <button class="btn btn-primary">Buy Now</button>
             </div>
-          </div>
-        </div>
-        <div class="col-12 col-lg">
-          <div class="card" href="#">
-            <img src="{% static '/img/banner-micro2.png' %}" class="card-img-top banner-micro2" alt="...">
-            <div class="card-img-overlay">
-              <p class="card-title fw-bold fs-3">Xiaomi</p>
-              <p class="card-text text-wrap fs-4">Теперь по самым доступным ценам</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-12  col-lg">
-          <div class="card" href="#">
-            <img src="{% static '/img/banner-micro3.png' %}" class="card-img-top banner-micro3" alt="...">
-            <div class="card-img-overlay">
-              <p class="card-title fw-bold fs-3">OnePlus</p>
-              <p class="card-text fs-4">Новые модели уже в продаже</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- baner 2 col -->
-    <div id="banner" class="container px-0 py-2">
-      <div class="row align-items-center justify-content-between gy-2">
-        <div class="col-lg">
-          <div class="card" href="#">
-            <img src="{% static '/img/banner-mini2.png' %}" class="card-img img-conf-1" alt="...">
-            <div class="card-img-overlay">
-              <p class="card-title a fw-bold fs-3">ПОДАРОЧНЫЕ КАРТЫ</p>
-              <p class="card-text a fw-bold fs-5">ДОСТАВЬТЕ ДОРОГОМУ ЧЕЛОВЕКУ УДОВОЛЬСТВИЕ ВЫБРАТЬ ПОДАРОК, КОТОРЫЙ ЕМУ ТОЧНО ПОНРАВИТСЯ!</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg">
-          <div class="card" href="#">
-            <img src="{% static '/img/banner-mini3.png' %}" class="card-img img-conf-2" alt="...">
-            <div class="card-img-overlay">
-              <p class="card-title a fw-bold fs-3">ДОПОЛНИТЕЛЬНАЯ БЕСПЛАТНАЯ ГАРАНТИЯ</p>
-              <p class="card-text a fw-bold fs-6">ДОПОЛНИТЕЛЬНАЯ ГАРАНТИЯ – ПРЕДСТАВЛЯЕТ СОБОЙ БЕСПЛАТНОЕ
-                                                  СЕРВИСНОЕ ОБСЛУЖИВАНИЕ ПРИОБРЕТЕННЫХ У НАС ТОВАРОВ НА 2 ГОДА, ДЕЙСТВУЮЩАЯ ПО ОКОНЧАНИИ ОСНОВНОЙ ГОДОВОЙ ГАРАНТИИ.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- baner grid -->
-    <div id="banner" class="container px-0 py-2">
-      <div class="row align-items-center justify-content-between gy-2">
-        <div class="col-auto">
-          <div class="card" href="#">
-            <img src="{% static '/img/banner-micro4.jpg' %}" class="card-img-top banner-micro4" alt="...">
-            <div class="card-img-overlay"></div>
           </div>
         </div>
         <div class="col">
-          <div class="container px-0">
-            <div class="row row-cols-1 align-items-center justify-content-between gy-2">
-              <div class="col-md-auto">
-                <div class="card" href="#">
-                  <img src="{% static '/img/banner-micro5.jpg' %}" class="card-img-top banner-micro5" alt="...">
-                  <div class="card-img-overlay"></div>
-                </div>
-              </div>
-              <div class="col-auto">
-                <div class="card" href="#">
-                  <img src="{% static '/img/banner-micro6.jpg' %}" class="card-img-top banner-micro6" alt="...">
-                  <div class="card-img-overlay"></div>
-                </div>
-              </div>
+          <div class="product">
+            <div class="imgbox"> <img src="https://i.imgur.com/iDwDQ4o.png"> </div>
+            <div class="specifies">
+              <h2>Analog Watch <br> <span>Rolex</span></h2>
+              <div class="price">$1500</div> <label>Size</label>
+              <ul>
+                <li>10MM</li>
+                <li>20MM</li>
+                <li>30MM</li>
+                <li>40MM</li>
+                <li>50MM</li>
+              </ul> <label>Colors</label>
+              <ul class="colors">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul> <button class="btn btn-primary">Buy Now</button>
             </div>
           </div>
         </div>
-        <div class="col-auto">
-          <div class="card" href="#">
-            <img src="{% static '/img/banner-micro7.jpg' %}" class="card-img-top banner-micro7" alt="...">
-            <div class="card-img-overlay"></div>
+        <div class="col">
+          <div class="product">
+            <div class="imgbox"> <img src="https://i.imgur.com/iDwDQ4o.png"> </div>
+            <div class="specifies">
+              <h2>Analog Watch <br> <span>Rolex</span></h2>
+              <div class="price">$1500</div> <label>Size</label>
+              <ul>
+                <li>10MM</li>
+                <li>20MM</li>
+                <li>30MM</li>
+                <li>40MM</li>
+                <li>50MM</li>
+              </ul> <label>Colors</label>
+              <ul class="colors">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul> <button class="btn btn-primary">Buy Now</button>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-    <div id="banner" class="container px-0 py-2">
-      <div class="row align-items-center justify-content-between gy-2">
-        <div class="col-md">
-          <div class="card" href="#">
-            <img src="{% static '/img/banner-mini1.jpg' %}" class="card-img-top" alt="...">
-            <div class="card-img-overlay">
-              <p class="card-title b fs-6">Новинка от Xiaomi, Apple, Google...</p>
-              <p class="card-text b fw-bold fs-3">Автоматизация всего дома с помощью современных гаджетов</p>
+        <div class="col">
+          <div class="product">
+            <div class="imgbox"> <img src="https://i.imgur.com/iDwDQ4o.png"> </div>
+            <div class="specifies">
+              <h2>Analog Watch <br> <span>Rolex</span></h2>
+              <div class="price">$1500</div> <label>Size</label>
+              <ul>
+                <li>10MM</li>
+                <li>20MM</li>
+                <li>30MM</li>
+                <li>40MM</li>
+                <li>50MM</li>
+              </ul> <label>Colors</label>
+              <ul class="colors">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul> <button class="btn btn-primary">Buy Now</button>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
-{% include 'include/_footer.html' %}
-{% include 'include/_categories.html' %}
+  {% include 'include/_footer.html' %}
+  {% include 'include/_categories-1.html' %}
 </body>
-</html> 
+
+</html>
